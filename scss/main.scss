@@ -1,0 +1,101 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background: $primary-color;
+  color: $content-color;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Vast Shadow', cursive;
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-title {
+    font-size: 3rem;
+  }
+
+  &.lg-heading {
+    font-size: 5rem;
+  }
+
+  &.sm-description {
+    font-family: 'Rokkitt', serif;
+    font-size: 2rem;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  // position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+main {
+  padding: 2rem 2rem;
+  height: 100%;
+}
+
+nav {
+  font-family: 'Fredericka the Great', cursive;
+
+  .nav-list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+
+    li {
+      padding: 0 1rem;
+      display: inline;
+
+      .link-item {
+        font-size: 1.5rem;
+
+        &.active {
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+
+        &:hover {
+          color: $secondary-color;
+          @include easeOutTransition;
+        }
+      }
+
+      .lg-title {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.text-secondary {
+  color: $secondary-color;
+}

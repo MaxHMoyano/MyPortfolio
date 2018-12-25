@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Max Moyano Portfolio",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxHMoyano/MyPortolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Sass"
+  ],
+  "author": "MaxHMoyano@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxHMoyano/MyPortolio/issues"
+  },
+  "homepage": "https://github.com/MaxHMoyano/MyPortolio#readme"
+}
