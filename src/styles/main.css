@@ -1,84 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; }
 
-body {
-  background: #0d2a47;
+html, body {
+  font-family: 'Ubuntu', sans-serif; }
+
+#base_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  padding-bottom: 0;
+  height: 100vh;
+  background: #111;
   color: #fff;
-  overflow: hidden;
-  height: 100%;
-  margin: 0;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url(../img/bg.jpg);
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(13, 42, 71, 0.4); }
+  overflow: hidden; }
 
-h1,
-h2,
-h3 {
-  font-family: 'Vast Shadow', cursive;
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-title,
-  h2.lg-title,
-  h3.lg-title {
-    font-size: 3rem; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 5rem; }
-  h1.sm-description,
-  h2.sm-description,
-  h3.sm-description {
-    font-family: 'Rokkitt', serif;
-    font-size: 2rem; }
+.navbar {
+  flex: 0 0 20%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+  .navbar ul.menu {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: stretch; }
+    .navbar ul.menu .menu-item-li {
+      list-style: none;
+      text-align: center; }
+      .navbar ul.menu .menu-item-li a {
+        color: #fff;
+        padding: .5rem 2rem;
+        font-size: 2rem;
+        text-decoration: none;
+        transition: color .5s ease;
+        font-weight: 600; }
+        .navbar ul.menu .menu-item-li a:hover {
+          color: #3c46db; }
+  .navbar .title-container {
+    flex: 0 0 20%;
+    display: flex;
+    flex-flow: column nowrap; }
+    .navbar .title-container h1.title {
+      text-align: center; }
+    .navbar .title-container .social-media {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly; }
+      .navbar .title-container .social-media a {
+        color: #fff;
+        padding: .75rem;
+        transition: color .5s ease; }
+        .navbar .title-container .social-media a:hover {
+          color: #3c46db; }
 
-a {
+.section-header {
+  font-size: 3rem; }
+
+.btn-primary {
+  display: block;
+  width: 20rem;
+  padding: 1rem 2rem;
+  background: #3c46db;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: border-radius .5s ease, font-size .5s ease; }
+  .btn-primary:hover {
+    background: #252d99;
+    border-radius: 20px;
+    font-size: 1.1rem; }
 
-header {
-  z-index: 2;
-  width: 100%; }
+.section-content {
+  line-height: 1.5rem;
+  padding: 1rem 0; }
 
-main {
-  padding: 2rem 2rem;
-  height: 100%; }
+.page-content {
+  flex: 1 1 80%;
+  overflow: hidden auto; }
+  .page-content .section {
+    padding: 1.5rem;
+    margin: .5rem;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px; }
 
-nav {
-  font-family: 'Fredericka the Great', cursive; }
-  nav .nav-list {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-top: 1rem; }
-    nav .nav-list li {
-      padding: 0 1rem;
-      display: inline; }
-      nav .nav-list li .link-item {
-        font-size: 1.5rem; }
-        nav .nav-list li .link-item.active {
-          color: #4d7c78;
-          text-decoration: underline; }
-        nav .nav-list li .link-item:hover {
-          color: #4d7c78;
-          transition: all 0.2s ease-out; }
-      nav .nav-list li .lg-title {
-        font-size: 4rem; }
+#About {
+  display: flex;
+  flex-flow: row nowrap; }
+  #About .about-content {
+    flex: 1 1 auto; }
+  #About img {
+    padding: 2rem;
+    border-radius: 50%;
+    flex: 1 0 20%;
+    width: 20rem;
+    height: 20rem; }
 
-p {
-  margin: 0;
-  padding: 0; }
-
-.text-secondary {
-  color: #4d7c78; }
+#Contact .contact-icon {
+  padding: .5rem; }

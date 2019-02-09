@@ -4,64 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Rokkitt|Vast+Shadow"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./styles/main.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <title>Learning</title>
+    <title>Max Moyano</title>
   </head>
-
-  <body id="bg-img">
-    <header class="header">
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="link-item active" href="/home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="link-item" href="/work.html">My work</a>
-          </li>
-          <li class="title-item">
-            <a class="lg-title"
-              >Max <span class="text-secondary">Moyano</span></a
-            >
-            <!-- <div class="icons">
-						<a href="">
-							<i class="fab fa-twitter"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-github"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-linkedin-in"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</div> -->
-          </li>
-          <li class="nav-item">
-            <a class="link-item" href="/skills.html">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="link-item" href="/contact.html">Contact me</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id="home">
-      <h1 class="lg-heading">About me</h1>
-      <h3 class="sm-description">Description goes here</h3>
-      <img src="./assets/img/myself.jpeg" alt="avatar.jpg" />
-    </main>
-    <footer class="footer"></footer>
-    <script src="./scripts/index.js"></script>
+  <body>
+    <div id="base_wrapper">
+      <header class="header">
+        <nav class="navbar">
+          <ul class="menu">
+            <li class="menu-item-li"><a href="#About">About</a></li>
+            <li class="menu-item-li"><a href="#Projects">Projects</a></li>
+          </ul>
+          <div class="title-container">
+            <img src="" alt="Logo">
+            <h1 class="title">Max Moyano</h1>
+            <div class="social-media">
+              <a href="" class="social-media-link"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="" class="social-media-link"><i class="fab fa-github fa-2x"></i></a>
+              <a href="" class="social-media-link"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="" class="social-media-link"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+          </div>
+          <ul class="menu">
+            <li class="menu-item-li"><a href="#Skills">Skills</a></li>
+            <li class="menu-item-li"><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page-content">
+        <section id="About" class="section">
+          <div class="about-content">
+            <h2 class="section-header">About me</h2>
+            <p class="section-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iusto eius veniam quasi aspernatur, omnis nostrum voluptate, exercitationem totam ipsum atque quibusdam ducimus quam repellat distinctio? Deleniti et accusamus odio, doloremque porro consectetur, beatae iste quis quia dicta inventore, tempora velit. Nemo nesciunt, eius odit sint laboriosam dignissimos quaerat cumque consequatur. Necessitatibus, repellendus? Quia voluptatem cupiditate aperiam pariatur non mollitia explicabo nulla voluptas hic voluptates eos quod vero corrupti, cum molestiae. Quas, cumque quos. Non culpa quidem quasi nobis et iure odio incidunt ad unde, quam minima fugiat eius amet recusandae a distinctio, dicta cum quibusdam ipsum hic iste voluptates.</p>
+            <a href="#Projects" class="btn-primary">View my work!</a>
+          </div>
+          <img src="./assets/img/myself.jpeg" alt="">
+        </section>
+        <section id="Projects" class="section"></section>
+        <section id="Skills" class="section"></section>
+        <section id="Contact" class="section">
+          <div class="information-group">
+            <i class="fas fa-2x fa-user contact-icon"></i>
+            <span><strong>Name: </strong> Maximiliano Hernan Moyano</span>
+          </div>
+          <div class="information-group">
+            <i class="fas fa-2x fa-map-marked-alt contact-icon"></i>
+            <span><strong>Adress: </strong> Argentina - Córdoba - Córdoba - Palermo 3143 - ZIP X5012</span>
+          </div>
+          <div class="information-group">
+            <i class="fas fa-2x fa-mobile-alt contact-icon"></i>
+            <span><strong>Phone Number: </strong> +54-3512766171</span>
+          </div>
+          <div class="information-group">
+            <i class="fas fa-2x fa-envelope contact-icon"></i>
+            <span><strong>Email: </strong> MaxHMoyano@gmail.com</span>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
