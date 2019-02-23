@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-$primary-color: #3c46db;
-$secondary-color: #252d99;
+$primary-color: #555ee4;
+$secondary-color: #2e39cf;
 $bg-color: #111;
 $content-color: #fff;
 
@@ -16,6 +16,11 @@ html, body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+  // Photo by Émile Perron on Unsplash
+  background: url(../assets/img/background.jpg) no-repeat center center/cover;
+}
+
 // Base wrapper
 #base_wrapper {
   display: flex;
@@ -23,7 +28,7 @@ html, body {
   padding: 1rem;
   padding-bottom: 0;
   height: 100vh;
-  background: $bg-color;
+  background: rgba($color: #000, $alpha: 0.8);
   color: $content-color;
   overflow: hidden;
 }
@@ -81,26 +86,69 @@ html, body {
 // Utilities
 .section-header {
   font-size: 3rem;
+  margin: .5rem;
 }
 
 .btn-primary {
-  display: block;
-  width: 20rem;
+  display: inline-block;
   padding: 1rem 2rem;
+  margin: .25rem 0;
   background: $primary-color;
   color: $content-color;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: border-radius .5s ease, font-size .5s ease;
+  transition: border-radius .5s ease;
   &:hover {
     background: $secondary-color;
-    border-radius: 20px;
-    font-size: 1.1rem;
+    border-radius: 10px;
   }
 }
+
+.project-box {
+  background: rgba($color: #000000, $alpha: .2);
+  padding: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  .project-content {
+    .project-header {
+      padding: .25rem;
+    }
+    .project-description {
+      padding: .25rem;
+    }
+  }
+  .project-image {
+    flex: 0 0 33%;
+  }
+}
+
+.skill-box {
+  background: rgba($color: #000000, $alpha: .2);
+  padding: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  .skill-image {
+    flex: 0 0 33%;
+  }
+  .skill-content {
+    text-align: right;
+    .skill-header {
+      padding: .25rem;
+    }
+    .skill-description {
+      padding: .25rem;
+    }
+  }
+}
+
+
+
+
+
 .section-content {
   line-height: 1.5rem;
   padding: 1rem 0;

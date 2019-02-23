@@ -7,13 +7,16 @@
 html, body {
   font-family: 'Ubuntu', sans-serif; }
 
+body {
+  background: url(../assets/img/background.jpg) no-repeat center center/cover; }
+
 #base_wrapper {
   display: flex;
   flex-flow: column nowrap;
   padding: 1rem;
   padding-bottom: 0;
   height: 100vh;
-  background: #111;
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   overflow: hidden; }
 
@@ -39,7 +42,7 @@ html, body {
         transition: color .5s ease;
         font-weight: 600; }
         .navbar ul.menu .menu-item-li a:hover {
-          color: #3c46db; }
+          color: #555ee4; }
   .navbar .title-container {
     flex: 0 0 20%;
     display: flex;
@@ -55,27 +58,54 @@ html, body {
         padding: .75rem;
         transition: color .5s ease; }
         .navbar .title-container .social-media a:hover {
-          color: #3c46db; }
+          color: #555ee4; }
 
 .section-header {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin: .5rem; }
 
 .btn-primary {
-  display: block;
-  width: 20rem;
+  display: inline-block;
   padding: 1rem 2rem;
-  background: #3c46db;
+  margin: .25rem 0;
+  background: #555ee4;
   color: #fff;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: border-radius .5s ease, font-size .5s ease; }
+  transition: border-radius .5s ease; }
   .btn-primary:hover {
-    background: #252d99;
-    border-radius: 20px;
-    font-size: 1.1rem; }
+    background: #2e39cf;
+    border-radius: 10px; }
+
+.project-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: row nowrap; }
+  .project-box .project-content .project-header {
+    padding: .25rem; }
+  .project-box .project-content .project-description {
+    padding: .25rem; }
+  .project-box .project-image {
+    flex: 0 0 33%; }
+
+.skill-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: row nowrap; }
+  .skill-box .skill-image {
+    flex: 0 0 33%; }
+  .skill-box .skill-content {
+    text-align: right; }
+    .skill-box .skill-content .skill-header {
+      padding: .25rem; }
+    .skill-box .skill-content .skill-description {
+      padding: .25rem; }
 
 .section-content {
   line-height: 1.5rem;
