@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-$primary-color: #555ee4;
-$secondary-color: #2e39cf;
-$bg-color: #111;
-$content-color: #fff;
+// Photo by Émile Perron on Unsplash
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$dark: #071013;
+$primary: #ed7b8f;
+$white: #ffffff;
+$secondary: #7cc8ff;
+$light: #dfe0e2;
 
 // Simple reset
 * {
@@ -11,177 +14,83 @@ $content-color: #fff;
   box-sizing: border-box;
 }
 
-// Font family
-html, body {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 body {
-  // Photo by Émile Perron on Unsplash
-  background: url(../assets/img/background.jpg) no-repeat center center/cover;
-}
-
-// Base wrapper
-#base_wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 1rem;
-  padding-bottom: 0;
-  height: 100vh;
-  background: rgba($color: #000, $alpha: 0.8);
-  color: $content-color;
   overflow: hidden;
 }
-
-.navbar {
-  flex: 0 0 20%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  ul.menu {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-content: stretch;
-    .menu-item-li {
-      list-style: none;
-      text-align: center;
-      a {
-        color: $content-color;
-        padding: .5rem 2rem;
-        font-size: 2rem;
-        text-decoration: none;
-        transition: color .5s ease;
-        font-weight: 600;
-        &:hover {
-          color: $primary-color;
-        }
-      }
-    }
+.main-container {
+  color: $light;
+  font-family: 'Roboto', sans-serif;
+  background: rgba($color: $dark, $alpha: .75);
+  background-size:cover;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'nav content';
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/img/background.jpg') no-repeat center center/cover;
+    z-index: -1;
   }
-  .title-container {
-    flex: 0 0 20%;
+  .main-nav {
+    grid-area: nav;
     display: flex;
     flex-flow: column nowrap;
-    h1.title {
-      text-align: center;
-    }
-    .social-media {
+    align-items: center;
+    .menu-options {
+      border-right: 1px solid $white;
+      flex: 1 0;
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
-      a {
-        color: $content-color;
-        padding: .75rem;
-        transition: color .5s ease;
-        &:hover {
-          color: $primary-color;
+      flex-flow: column nowrap;
+      padding: 1rem;
+      list-style: none;
+      .menu-option {
+        a {
+          display: block;
+          padding: 1rem .25rem;
+          color: $light;
+          text-decoration: none;
+          transition: all 0.25s ease-in;
+          i {
+            margin-right: .5rem;
+          }
+          &:hover {
+            color: $secondary;
+          }
         }
+      }
+    }
+  }
+  .main-content {
+    grid-area: content;
+    .content-box {
+      padding: 1rem;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .title {
+        color: $primary;
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
+      }
+      .description {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      img {
+        width: 10rem;
+        border-radius: 50%;
+        border: solid 3px $light;
       }
     }
   }
 }
 
-// Utilities
-.section-header {
-  font-size: 3rem;
-  margin: .5rem;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin: .25rem 0;
-  background: $primary-color;
-  color: $content-color;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  transition: border-radius .5s ease;
-  &:hover {
-    background: $secondary-color;
-    border-radius: 10px;
-  }
-}
-
-.project-box {
-  background: rgba($color: #000000, $alpha: .2);
-  padding: 1rem;
-  margin-bottom: .5rem;
-  display: flex;
-  flex-flow: row nowrap;
-  .project-content {
-    .project-header {
-      padding: .25rem;
-    }
-    .project-description {
-      padding: .25rem;
-    }
-  }
-  .project-image {
-    flex: 0 0 33%;
-  }
-}
-
-.skill-box {
-  background: rgba($color: #000000, $alpha: .2);
-  padding: 1rem;
-  margin-bottom: .5rem;
-  display: flex;
-  flex-flow: row nowrap;
-  .skill-image {
-    flex: 0 0 33%;
-  }
-  .skill-content {
-    text-align: right;
-    .skill-header {
-      padding: .25rem;
-    }
-    .skill-description {
-      padding: .25rem;
-    }
-  }
-}
-
-
-
-
-
-.section-content {
-  line-height: 1.5rem;
-  padding: 1rem 0;
-}
-
-.page-content {
-  flex: 1 1 80%;
-  overflow: hidden auto;
-  .section {
-    padding: 1.5rem;
-    margin: .5rem;
-    border: 1px solid #f4f4f4;
-    border-radius: 10px;
-  }
-}
-
-#About {
-  display: flex;
-  flex-flow: row nowrap;
-  .about-content {
-    flex: 1 1 auto;
-  }
-  img {
-    padding: 2rem;
-    border-radius: 50%;
-    flex: 1 0 20%;
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-#Contact {
-  .contact-icon {
-    padding: .5rem;
-  }
-}
