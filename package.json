@@ -4,7 +4,7 @@
   "description": "Max Moyano Portfolio",
   "main": "index.js",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.12.0"
   },
   "devDependencies": {
     "eslint": "^5.11.1",

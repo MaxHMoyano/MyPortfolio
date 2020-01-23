@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "navbar" "content";
+  color: #242e31;
+}
+
+html .navbar,
+body .navbar {
+  padding: 0 5rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .navbar .logo,
+body .navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 1rem;
+}
+
+html .navbar .logo:hover,
+body .navbar .logo:hover {
+  -webkit-transform: translate3d(0, 0.5rem, 0);
+          transform: translate3d(0, 0.5rem, 0);
+  background-color: #f4f4f4;
+}
+
+html .navbar .logo .image img,
+body .navbar .logo .image img {
+  border-radius: 50%;
+  border: 2px solid #242e31;
+  width: 4rem;
+  height: 4rem;
+}
+
+html .navbar .logo .name,
+body .navbar .logo .name {
+  padding: 0.5rem;
+}
+
+html .navbar .logo .name h5,
+body .navbar .logo .name h5 {
+  font-size: 1rem;
+}
+
+html .navbar .logo .name p,
+body .navbar .logo .name p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+html .navbar .menu,
+body .navbar .menu {
+  height: 100%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+html .navbar .menu li,
+body .navbar .menu li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .navbar .menu li a,
+body .navbar .menu li a {
+  width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #242e31;
+  font-weight: bolder;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+html .navbar .menu li a:hover,
+body .navbar .menu li a:hover {
+  -webkit-transform: translate3d(0, 0.25rem, 0);
+          transform: translate3d(0, 0.25rem, 0);
+}
+
+html .navbar .menu li a:hover, html .navbar .menu li a.active,
+body .navbar .menu li a:hover,
+body .navbar .menu li a.active {
+  border-bottom: 2px solid #242e31;
+}
+
+html .content,
+body .content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  max-height: 88vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+html .content section,
+body .content section {
+  height: 88vh;
+  padding: 5rem;
+}
+
+html .content section#home,
+body .content section#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+html .content section#home h2,
+body .content section#home h2 {
+  font-size: 3.5rem;
+  opacity: 0.7;
+}
+
+html .content section#home h1,
+body .content section#home h1 {
+  font-size: 4.5rem;
+}
+
+html .content section#home .links,
+body .content section#home .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 10%;
+}
+
+html .content section#home .links a,
+body .content section#home .links a {
+  color: #242e31;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html .content section#home .links a:hover,
+body .content section#home .links a:hover {
+  opacity: 0.8;
+}
+
+html .content section#contact,
+body .content section#contact {
+  padding: 10rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+html .content section#contact .social,
+body .content section#contact .social {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+html .content section#contact .social h2,
+body .content section#contact .social h2 {
+  font-size: 4rem;
+}
+
+html .content section#contact .social .social_list,
+body .content section#contact .social .social_list {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+html .content section#contact .social .social_list a,
+body .content section#contact .social .social_list a {
+  color: #242e31;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+html .content section#contact .social .social_list a:hover,
+body .content section#contact .social .social_list a:hover {
+  opacity: 0.8;
+}
+
+html .content section#contact .contact_data,
+body .content section#contact .contact_data {
+  height: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+html .content section#contact .contact_data .info-block,
+body .content section#contact .contact_data .info-block {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+html .content section#contact .contact_data .info-block i,
+body .content section#contact .contact_data .info-block i {
+  width: 5rem;
+}
+
+html .content section#contact .contact_data .info-block address,
+html .content section#contact .contact_data .info-block span,
+body .content section#contact .contact_data .info-block address,
+body .content section#contact .contact_data .info-block span {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+html .content section#contact .contact_data h2,
+body .content section#contact .contact_data h2 {
+  font-size: 5rem;
+}
+/*# sourceMappingURL=main.css.map */
