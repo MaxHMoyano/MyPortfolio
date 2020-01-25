@@ -10,7 +10,8 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(80%, #e4e4e4));
+  background: linear-gradient(to bottom, #fff 20%, #e4e4e4 80%);
   font-family: "Roboto", sans-serif;
   display: -ms-grid;
   display: grid;
@@ -58,7 +59,7 @@ html .navbar .logo:hover,
 body .navbar .logo:hover {
   -webkit-transform: translate3d(0, 0.5rem, 0);
           transform: translate3d(0, 0.5rem, 0);
-  background-color: #f4f4f4;
+  background-color: #e4e4e4;
 }
 
 html .navbar .logo .image img,
@@ -192,6 +193,7 @@ body .content section#home h1 {
 
 html .content section#home .links,
 body .content section#home .links {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,7 +214,61 @@ body .content section#home .links a {
 
 html .content section#home .links a:hover,
 body .content section#home .links a:hover {
+  -webkit-transform: translate3d(0, 0.25rem, 0);
+          transform: translate3d(0, 0.25rem, 0);
   opacity: 0.8;
+}
+
+html .content section#work,
+body .content section#work {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20vw)[4];
+      grid-template-columns: repeat(4, 20vw);
+  -ms-grid-rows: (70vh)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 70vh);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  overflow: auto;
+}
+
+html .content section#work .project,
+body .content section#work .project {
+  height: 70vh;
+  padding: 1.5rem;
+  -webkit-box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
+          box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+html .content section#work .project img,
+body .content section#work .project img {
+  width: 100%;
+  height: 30%;
+}
+
+html .content section#work .project:hover,
+body .content section#work .project:hover {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 1rem, 0);
+          transform: translate3d(0, 1rem, 0);
 }
 
 html .content section#contact,
@@ -273,11 +329,15 @@ body .content section#contact .social .social_list a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
+  padding: 1rem;
+  border-radius: 20%;
 }
 
 html .content section#contact .social .social_list a:hover,
 body .content section#contact .social .social_list a:hover {
   opacity: 0.8;
+  -webkit-transform: translate3d(0, 0.25rem, 0);
+          transform: translate3d(0, 0.25rem, 0);
 }
 
 html .content section#contact .contact_data,
@@ -322,6 +382,7 @@ html .content section#contact .contact_data .info-block address,
 html .content section#contact .contact_data .info-block span,
 body .content section#contact .contact_data .info-block address,
 body .content section#contact .contact_data .info-block span {
+  font-weight: bold;
   font-size: 1.5rem;
   margin-right: 1rem;
 }

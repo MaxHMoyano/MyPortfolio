@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 $white: #fff;
-$light: #f4f4f4;
+$light: #e4e4e4;
 $gray: #555;
 $dark: #242e31;
 $black: #333;
@@ -16,7 +16,8 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: $white;
+  background: linear-gradient(to bottom, $white 20%, $light 80%);
+  // background: $white;
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 1fr;
@@ -115,6 +116,7 @@ body {
           font-size: 4.5rem;
         }
         .links {
+          margin-top: 1rem;
           display: flex;
           align-items: center;
           justify-content: space-around;
@@ -123,8 +125,39 @@ body {
             color: $dark;
             transition: all 0.4s ease;
             &:hover {
+              transform: translate3d(0, 0.25rem, 0);
               opacity: 0.8;
             }
+          }
+        }
+      }
+      &#work {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: repeat(auto-fill, 70vh);
+        justify-content: center;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        overflow: auto;
+        .project {
+          height: 70vh;
+          padding: 1.5rem;
+          box-shadow: 0 2px 16px rgba($color: $dark, $alpha: 0.3);
+          display: flex;
+          flex-flow: column nowrap;
+          transition: all 0.3s ease;
+          // justify-content: center;
+          align-items: center;
+          margin: 2rem 0;
+          img {
+            width: 100%;
+            height: 30%;
+          }
+
+          &:hover {
+            opacity: 0.8;
+            transform: translate3d(0, 1rem, 0);
           }
         }
       }
@@ -152,8 +185,11 @@ body {
               color: $dark;
               transition: all 0.3s ease;
               cursor: pointer;
+              padding: 1rem;
+              border-radius: 20%;
               &:hover {
                 opacity: 0.8;
+                transform: translate3d(0, 0.25rem, 0);
               }
             }
           }
@@ -175,6 +211,7 @@ body {
             }
             address,
             span {
+              font-weight: bold;
               font-size: 1.5rem;
               margin-right: 1rem;
             }
