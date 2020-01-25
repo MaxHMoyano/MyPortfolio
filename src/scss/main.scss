@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+$primary: #288eda;
+$secondary: #ca1e00;
 $white: #fff;
 $light: #e4e4e4;
 $gray: #555;
@@ -17,11 +19,10 @@ body {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to bottom, $white 20%, $light 80%);
-  // background: $white;
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "navbar" "content";
   color: $dark;
   .navbar {
@@ -63,33 +64,43 @@ body {
 
     .menu {
       height: 100%;
-      width: 40%;
+      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       list-style: none;
       li {
+        flex: 0 0 20%;
         height: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+          a {
+            transform: translate3d(0, 0.25rem, 0);
+            border-bottom: 2px solid $dark;
+          }
+        }
+        &.active {
+          a {
+            border-bottom: 2px solid $dark;
+          }
+        }
         a {
-          width: 8rem;
+          text-transform: uppercase;
+          width: 60%;
           display: flex;
           align-items: center;
           justify-content: center;
+          text-align: center;
           text-decoration: none;
           padding: 0.5rem 1rem;
           color: $dark;
           font-weight: bolder;
+          font-size: 1.2rem;
           border-bottom: 2px solid $white;
           transition: all 0.3s ease;
-          &:hover {
-            transform: translate3d(0, 0.25rem, 0);
-          }
-          &:hover,
-          &.active {
-            border-bottom: 2px solid $dark;
-          }
         }
       }
     }
@@ -108,6 +119,7 @@ body {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
+        padding: 10rem 10rem;
         h2 {
           font-size: 3.5rem;
           opacity: 0.7;
@@ -125,6 +137,7 @@ body {
             color: $dark;
             transition: all 0.4s ease;
             &:hover {
+              color: $primary;
               transform: translate3d(0, 0.25rem, 0);
               opacity: 0.8;
             }
@@ -162,7 +175,7 @@ body {
         }
       }
       &#contact {
-        padding: 10rem 5rem;
+        padding: 10rem 15rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -188,6 +201,7 @@ body {
               padding: 1rem;
               border-radius: 20%;
               &:hover {
+                color: $secondary;
                 opacity: 0.8;
                 transform: translate3d(0, 0.25rem, 0);
               }

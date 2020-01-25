@@ -17,8 +17,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
       grid-template-areas: "navbar" "content";
   color: #242e31;
 }
@@ -89,33 +89,27 @@ body .navbar .logo .name p {
 html .navbar .menu,
 body .navbar .menu {
   height: 100%;
-  width: 40%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
 }
 
 html .navbar .menu li,
 body .navbar .menu li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-html .navbar .menu li a,
-body .navbar .menu li a {
-  width: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,25 +119,43 @@ body .navbar .menu li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+}
+
+html .navbar .menu li:hover a,
+body .navbar .menu li:hover a {
+  -webkit-transform: translate3d(0, 0.25rem, 0);
+          transform: translate3d(0, 0.25rem, 0);
+  border-bottom: 2px solid #242e31;
+}
+
+html .navbar .menu li.active a,
+body .navbar .menu li.active a {
+  border-bottom: 2px solid #242e31;
+}
+
+html .navbar .menu li a,
+body .navbar .menu li a {
+  text-transform: uppercase;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: #242e31;
   font-weight: bolder;
+  font-size: 1.2rem;
   border-bottom: 2px solid #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-html .navbar .menu li a:hover,
-body .navbar .menu li a:hover {
-  -webkit-transform: translate3d(0, 0.25rem, 0);
-          transform: translate3d(0, 0.25rem, 0);
-}
-
-html .navbar .menu li a:hover, html .navbar .menu li a.active,
-body .navbar .menu li a:hover,
-body .navbar .menu li a.active {
-  border-bottom: 2px solid #242e31;
 }
 
 html .content,
@@ -178,6 +190,7 @@ body .content section#home {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 10rem 10rem;
 }
 
 html .content section#home h2,
@@ -214,6 +227,7 @@ body .content section#home .links a {
 
 html .content section#home .links a:hover,
 body .content section#home .links a:hover {
+  color: #288eda;
   -webkit-transform: translate3d(0, 0.25rem, 0);
           transform: translate3d(0, 0.25rem, 0);
   opacity: 0.8;
@@ -273,7 +287,7 @@ body .content section#work .project:hover {
 
 html .content section#contact,
 body .content section#contact {
-  padding: 10rem 5rem;
+  padding: 10rem 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,6 +349,7 @@ body .content section#contact .social .social_list a {
 
 html .content section#contact .social .social_list a:hover,
 body .content section#contact .social .social_list a:hover {
+  color: #ca1e00;
   opacity: 0.8;
   -webkit-transform: translate3d(0, 0.25rem, 0);
           transform: translate3d(0, 0.25rem, 0);

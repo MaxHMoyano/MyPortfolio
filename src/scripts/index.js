@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener("click", e => {
       buttons.forEach(btn => btn.classList.remove("active"));
       btn.classList.add("active");
+      document.location = `#${btn.id.split("_")[0]}`;
     });
   });
 });
