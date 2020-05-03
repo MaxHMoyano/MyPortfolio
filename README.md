@@ -1,2 +1,2 @@
-# LearningProject
-A project to keep record of my learning process in all web development technologies
+# My portfolio
+To see my work and contact me you can go to https://maxhmoyano.github.io/portfolio/
