@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | MMoyano</title>
-    <link rel="stylesheet" href="./src/scss/main.css" />
+    <link rel="stylesheet" href="./src/scss/desktop.css" />
   </head>
 
   <body>
@@ -16,104 +16,168 @@
         </div>
         <div class="name">
           <h5>Maximiliano Moyano</h5>
-          <p>Front End Developer</p>
+          <p>Full stack javascript Developer</p>
         </div>
       </div>
-      <ul class="menu">
-        <li id="work_btn"><a>Work</a></li>
-        <li id="about_btn"><a>About Me</a></li>
-        <li id="contact_btn"><a>Contact</a></li>
-      </ul>
     </nav>
     <main class="content">
       <section id="home">
-        <h2>Hello! I'm</h2>
-        <h1>Maximiliano Moyano</h1>
-        <div class="links">
-          <a href="#">
-            <i class="fab fa-github fa-3x"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-linkedin fa-3x"></i>
-          </a>
+        <div class="profile">
+          <h2>Hello! I'm</h2>
+          <h1>Maximiliano Moyano</h1>
+          <div class="links">
+            <a href="https://github.com/MaxHMoyano" target="_blank">
+              <i class="fab fa-github fa-3x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+          </div>
         </div>
+        <ul class="menu">
+          <li id="work_btn"><a>Work</a></li>
+          <li id="about_btn"><a>About Me</a></li>
+          <li id="contact_btn"><a>Contact</a></li>
+        </ul>
       </section>
       <section id="work">
-        <div class="project">
-          <img src="./src/assets/img/mongo.png" alt="project" />
-          <h3>Argos</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            officiis velit consectetur delectus quia. Adipisci facere reiciendis
-            accusantium soluta dolor consequuntur provident suscipit dolore.
-            Blanditiis at vel ea cum molestiae accusamus repudiandae veniam
-            eligendi quas possimus laboriosam ipsa eveniet illo sapiente rerum
-            laborum ducimus ad maiores, quos, odio deleniti harum?
-          </p>
-        </div>
-        <div class="project">
-          <img src="./src/assets/img/mongo.png" alt="project" />
-          <h3>Argos</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            officiis velit consectetur delectus quia. Adipisci facere reiciendis
-            accusantium soluta dolor consequuntur provident suscipit dolore.
-            Blanditiis at vel ea cum molestiae accusamus repudiandae veniam
-            eligendi quas possimus laboriosam ipsa eveniet illo sapiente rerum
-            laborum ducimus ad maiores, quos, odio deleniti harum?
-          </p>
-        </div>
-        <div class="project">
-          <img src="./src/assets/img/mongo.png" alt="project" />
-          <h3>Argos</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            officiis velit consectetur delectus quia. Adipisci facere reiciendis
-            accusantium soluta dolor consequuntur provident suscipit dolore.
-            Blanditiis at vel ea cum molestiae accusamus repudiandae veniam
-            eligendi quas possimus laboriosam ipsa eveniet illo sapiente rerum
-            laborum ducimus ad maiores, quos, odio deleniti harum?
-          </p>
-        </div>
-        <div class="project">
-          <img src="./src/assets/img/mongo.png" alt="project" />
-          <h3>Argos</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            officiis velit consectetur delectus quia. Adipisci facere reiciendis
-            accusantium soluta dolor consequuntur provident suscipit dolore.
-            Blanditiis at vel ea cum molestiae accusamus repudiandae veniam
-            eligendi quas possimus laboriosam ipsa eveniet illo sapiente rerum
-            laborum ducimus ad maiores, quos, odio deleniti harum?
-          </p>
-        </div>
-        <div class="project">
-          <img src="./src/assets/img/mongo.png" alt="project" />
-          <h3>Argos</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            officiis velit consectetur delectus quia. Adipisci facere reiciendis
-            accusantium soluta dolor consequuntur provident suscipit dolore.
-            Blanditiis at vel ea cum molestiae accusamus repudiandae veniam
-            eligendi quas possimus laboriosam ipsa eveniet illo sapiente rerum
-            laborum ducimus ad maiores, quos, odio deleniti harum?
-          </p>
+        <div class="work_container">
+          <h2>As you can see... I like JS</h2>
+          <div class="project">
+            <div class="description">
+              <h2>Finning - Argos</h2>
+              <p>
+                It was my first professional work, I entered QPlus Software
+                Solutions on 2017. This system was a JQuery based monitoring
+                system for Caterpillar automatized trucks. A very basic
+                dashboard and a very heavy form | table system.
+              </p>
+              <div class="tech">
+                <i class="fab fa-js"></i>
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="repo"></div>
+            </div>
+            <img src="./src/assets/img/projects/argos.jpg" alt="project" />
+          </div>
+          <div class="project">
+            <img src="./src/assets/img/projects/amerian.png" alt="project" />
+            <div class="description">
+              <h2>Amerian Project</h2>
+              <p>
+                Amerian was a dashboard client made in React to manage human
+                resources and room renting for a known Hotel Brand here in
+                Argentina
+              </p>
+              <div class="tech">
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="repo">
+                <a href="https://github.com/MaxHMoyano/amerian" target="_blank">
+                  <span>Go take a look at the repo!</span>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h2>Pilka WebApp</h2>
+              <p>
+                Pilka was an Angular project made to manage multiple sport
+                centers and their reservations
+              </p>
+              <div class="tech">
+                <i class="fab fa-angular"></i>
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+              </div>
+              <!-- <div class="repo">
+                <a href="https://github.com/MaxHMoyano/amerian">
+                  <span>Go take a look at the repo!</span>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div> -->
+            </div>
+            <!-- <img src="./src/assets/img/projects/amerian.png" alt="project" /> -->
+          </div>
+          <div class="project">
+            <img
+              src="./src/assets/img/projects/project-manager.png"
+              alt="project"
+            />
+            <div class="description">
+              <h2>Project Manager API</h2>
+              <p>
+                A personal API made to organize my different projects and duties
+                in a day. Several endpoints to make projects and children tasks.
+                The project used Express framework and the NOSQL MongoDB
+                database
+              </p>
+              <div class="tech">
+                <i class="fab fa-node"></i>
+              </div>
+              <div class="repo">
+                <a
+                  href="https://github.com/MaxHMoyano/projects-manager-API"
+                  target="_blank"
+                >
+                  <span>Go take a look at the repo!</span>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h2>CoolCovers store</h2>
+              <p>
+                A react project to manage phone and peripherals sellings of a
+                local Phone Store
+              </p>
+              <div class="tech">
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="repo">
+                <a
+                  href="https://github.com/MaxHMoyano/projects-manager-API"
+                  target="_blank"
+                >
+                  <span>Go take a look at the repo!</span>
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://coolcovers-15ea7.web.app/" target="_blank">
+                  <span>Go take a look at the production!</span>
+                  <!-- <i class="fab fa-github"></i> -->
+                </a>
+              </div>
+            </div>
+            <img src="./src/assets/img/projects/coolcovers.png" alt="project" />
+          </div>
         </div>
       </section>
-      <section id="about">
+      <!-- <section id="about">
         Acerca de mi
-      </section>
+      </section> -->
       <section id="contact">
         <div class="social">
           <h2>I'm Social</h2>
           <div class="social_list">
-            <a href="#">
+            <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
               <i class="fab fa-instagram fa-3x"></i>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/MaxHMoyano" target="_blank">
               <i class="fab fa-twitter fa-3x"></i>
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/Moyano.Max/" target="_blank">
               <i class="fab fa-facebook fa-3x"></i>
             </a>
           </div>
@@ -129,7 +193,7 @@
           <div class="info-block">
             <span
               >MaxHMoyano
-              <i style="width: auto" class="fas fa-at"></i> Gmail.com
+              <i style="width: auto;" class="fas fa-at"></i> Gmail.com
             </span>
             <i class="fas fa-envelope-open-text fa-3x"></i>
           </div>

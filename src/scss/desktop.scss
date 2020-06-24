@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$primary: #288eda;
+$secondary: #ca1e00;
+$white: #fff;
+$light: #e4e4e4;
+$gray: #555;
+$dark: #242e31;
+$black: #333;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, $white 20%, $light 80%);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  color: $dark;
+  .navbar {
+    padding: 0 5rem;
+    grid-area: navbar;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      padding: 1rem;
+      &:hover {
+        transform: translate3d(0, 0.5rem, 0);
+      }
+      .image {
+        img {
+          border-radius: 50%;
+          border: 2px solid $dark;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      .name {
+        padding: 0.5rem;
+        h5 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .content {
+    grid-area: content;
+    max-height: 88vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    section {
+      min-height: 88vh;
+      padding: 5rem;
+      &#home {
+        display: flex;
+        flex-flow: row nowrap;
+        // padding: 8rem 8rem;
+        .profile {
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          h2 {
+            font-size: 3.5rem;
+            opacity: 0.7;
+          }
+          h1 {
+            font-size: 4.5rem;
+          }
+          .links {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 20%;
+            a {
+              color: $dark;
+              transition: all 0.4s ease;
+              &:hover {
+                color: $primary;
+                transform: translate3d(0, 0.25rem, 0);
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+        .menu {
+          height: 100%;
+          display: flex;
+          flex: 1;
+          flex-flow: column nowrap;
+          align-items: flex-end;
+          list-style: none;
+          li {
+            width: 100%;
+            &:hover {
+              a {
+                transform: translate3d(-0.5rem, 0, 0);
+              }
+            }
+            a {
+              cursor: pointer;
+              text-transform: uppercase;
+              width: 100%;
+              margin: 2rem 0;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              text-align: center;
+              text-decoration: none;
+              padding: 0.5rem 1rem;
+              color: $dark;
+              font-weight: bolder;
+              font-size: 3rem;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+      &#work {
+        .work_container {
+          padding: 0;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          .project {
+            height: 40vh;
+            box-shadow: 0 2px 16px rgba($color: $dark, $alpha: 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin: 2rem 0;
+            .description {
+              padding: 1.5rem;
+              flex: 0 0 50%;
+              .tech {
+                margin: 1rem 0;
+                i {
+                  font-size: 2.5rem;
+                }
+              }
+              .repo {
+                a {
+                  text-decoration: none;
+                  color: $primary;
+                  display: flex;
+                  align-items: center;
+                  font-size: 0.75rem;
+                  transition: all ease 0.3s;
+                  i {
+                    margin-left: 0.25rem;
+                  }
+                  &:hover {
+                    transform: translate3d(0, 2px, 0);
+                  }
+                }
+              }
+            }
+            img {
+              flex: 0 0 20%;
+              height: 100%;
+            }
+          }
+          .project:nth-child(even) {
+            .description {
+              text-align: left;
+              .tech {
+                i {
+                  margin: 0 1rem 0 0;
+                }
+              }
+              .repo {
+                a {
+                  justify-content: flex-start;
+                }
+              }
+            }
+            img {
+              margin-left: auto;
+            }
+          }
+          .project:nth-child(odd) {
+            .description {
+              text-align: right;
+              .tech {
+                i {
+                  margin: 0 0 0 1rem;
+                }
+              }
+              .repo {
+                a {
+                  justify-content: flex-end;
+                }
+              }
+            }
+            img {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+      &#contact {
+        padding: 10rem 15rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        .social {
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          h2 {
+            font-size: 4rem;
+          }
+          .social_list {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            a {
+              color: $dark;
+              transition: all 0.3s ease;
+              cursor: pointer;
+              padding: 1rem;
+              border-radius: 20%;
+              &:hover {
+                color: $secondary;
+                opacity: 0.8;
+                transform: translate3d(0, 0.25rem, 0);
+              }
+            }
+          }
+        }
+        .contact_data {
+          height: 100%;
+          width: 60%;
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-start;
+          align-items: flex-end;
+          .info-block {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            i {
+              width: 5rem;
+            }
+            address,
+            span {
+              font-weight: bold;
+              font-size: 1.5rem;
+              margin-right: 1rem;
+            }
+          }
+          h2 {
+            font-size: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
