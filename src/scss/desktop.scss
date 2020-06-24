@@ -112,7 +112,12 @@ body {
             width: 100%;
             &:hover {
               a {
-                transform: translate3d(-0.5rem, 0, 0);
+                transform: translate3d(-2rem, 0, 0);
+              }
+            }
+            &.active {
+              a {
+                transform: translate3d(-4rem, 0, 0);
               }
             }
             a {
@@ -130,6 +135,27 @@ body {
               font-weight: bolder;
               font-size: 3rem;
               transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+      &#skills {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        .skills_container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 2rem;
+          row-gap: 1.5rem;
+          span {
+            i {
+              margin-right: 0.5rem;
+            }
+            font-size: 1.5rem;
+            transition: all ease 0.3s;
+            &:hover {
+              transform: translate3d(3px, 0, 0);
             }
           }
         }

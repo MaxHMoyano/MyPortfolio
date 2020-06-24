@@ -193,8 +193,14 @@ body .content section#home .menu li {
 
 html .content section#home .menu li:hover a,
 body .content section#home .menu li:hover a {
-  -webkit-transform: translate3d(-0.5rem, 0, 0);
-          transform: translate3d(-0.5rem, 0, 0);
+  -webkit-transform: translate3d(-2rem, 0, 0);
+          transform: translate3d(-2rem, 0, 0);
+}
+
+html .content section#home .menu li.active a,
+body .content section#home .menu li.active a {
+  -webkit-transform: translate3d(-4rem, 0, 0);
+          transform: translate3d(-4rem, 0, 0);
 }
 
 html .content section#home .menu li a,
@@ -220,6 +226,49 @@ body .content section#home .menu li a {
   font-size: 3rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+html .content section#skills,
+body .content section#skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html .content section#skills .skills_container,
+body .content section#skills .skills_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+html .content section#skills .skills_container span,
+body .content section#skills .skills_container span {
+  font-size: 1.5rem;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+html .content section#skills .skills_container span i,
+body .content section#skills .skills_container span i {
+  margin-right: 0.5rem;
+}
+
+html .content section#skills .skills_container span:hover,
+body .content section#skills .skills_container span:hover {
+  -webkit-transform: translate3d(3px, 0, 0);
+          transform: translate3d(3px, 0, 0);
 }
 
 html .content section#work .work_container,
