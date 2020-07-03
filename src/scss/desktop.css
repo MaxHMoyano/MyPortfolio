@@ -12,7 +12,7 @@ body {
   width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(80%, #e4e4e4));
   background: linear-gradient(to bottom, #fff 20%, #e4e4e4 80%);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,12 +195,14 @@ html .content section#home .menu li:hover a,
 body .content section#home .menu li:hover a {
   -webkit-transform: translate3d(-2rem, 0, 0);
           transform: translate3d(-2rem, 0, 0);
+  border-right: 5px solid #242e31;
 }
 
 html .content section#home .menu li.active a,
 body .content section#home .menu li.active a {
   -webkit-transform: translate3d(-4rem, 0, 0);
           transform: translate3d(-4rem, 0, 0);
+  border-right: 5px solid #242e31;
 }
 
 html .content section#home .menu li a,
@@ -224,8 +226,8 @@ body .content section#home .menu li a {
   color: #242e31;
   font-weight: bolder;
   font-size: 3rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 html .content section#skills,

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 $primary: #288eda;
 $secondary: #ca1e00;
@@ -19,7 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to bottom, $white 20%, $light 80%);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-flow: column nowrap;
   color: $dark;
@@ -113,11 +113,13 @@ body {
             &:hover {
               a {
                 transform: translate3d(-2rem, 0, 0);
+                border-right: 5px solid $dark;
               }
             }
             &.active {
               a {
                 transform: translate3d(-4rem, 0, 0);
+                border-right: 5px solid $dark;
               }
             }
             a {
@@ -134,7 +136,7 @@ body {
               color: $dark;
               font-weight: bolder;
               font-size: 3rem;
-              transition: all 0.3s ease;
+              transition: all 0.5s ease;
             }
           }
         }
