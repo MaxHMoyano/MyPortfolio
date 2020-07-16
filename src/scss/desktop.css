@@ -10,9 +10,9 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(80%, #e4e4e4));
-  background: linear-gradient(to bottom, #fff 20%, #e4e4e4 80%);
-  font-family: "Roboto", sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#cfcfcf), color-stop(80%, #fff));
+  background: linear-gradient(to top, #cfcfcf 0%, #fff 80%);
+  font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,8 +291,6 @@ body .content section#work .work_container {
 html .content section#work .work_container .project,
 body .content section#work .work_container .project {
   height: 40vh;
-  -webkit-box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
-          box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: -webkit-box;
@@ -305,15 +303,41 @@ body .content section#work .work_container .project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 2rem 0;
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
 html .content section#work .work_container .project .description,
 body .content section#work .work_container .project .description {
-  padding: 1.5rem;
+  border-radius: 20px;
+  padding: 1.5rem 3rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  -webkit-box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
+          box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all ease 0.45s;
+  transition: all ease 0.45s;
+}
+
+html .content section#work .work_container .project .description:hover,
+body .content section#work .work_container .project .description:hover {
+  -webkit-transform: translate3d(0, 0, 20px);
+          transform: translate3d(0, 0, 20px);
 }
 
 html .content section#work .work_container .project .description .tech,
@@ -324,6 +348,12 @@ body .content section#work .work_container .project .description .tech {
 html .content section#work .work_container .project .description .tech i,
 body .content section#work .work_container .project .description .tech i {
   font-size: 2.5rem;
+}
+
+html .content section#work .work_container .project .description .repo,
+body .content section#work .work_container .project .description .repo {
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
 html .content section#work .work_container .project .description .repo a,
@@ -348,16 +378,48 @@ body .content section#work .work_container .project .description .repo a i {
 
 html .content section#work .work_container .project .description .repo a:hover,
 body .content section#work .work_container .project .description .repo a:hover {
-  -webkit-transform: translate3d(0, 2px, 0);
-          transform: translate3d(0, 2px, 0);
+  -webkit-transform: translate3d(0, 0, 10px);
+          transform: translate3d(0, 0, 10px);
 }
 
-html .content section#work .work_container .project img,
-body .content section#work .work_container .project img {
+html .content section#work .work_container .project .image,
+body .content section#work .work_container .project .image {
+  border-radius: 10px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  -webkit-perspective: 500px;
+          perspective: 500px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .content section#work .work_container .project .image img,
+body .content section#work .work_container .project .image img {
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  height: 80%;
+}
+
+html .content section#work .work_container .project:nth-child(even) .image img,
+body .content section#work .work_container .project:nth-child(even) .image img {
+  -webkit-box-shadow: 40px 30px 20px rgba(36, 46, 49, 0.3);
+          box-shadow: 40px 30px 20px rgba(36, 46, 49, 0.3);
+  -webkit-transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
+          transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
+}
+
+html .content section#work .work_container .project:nth-child(odd) .image img,
+body .content section#work .work_container .project:nth-child(odd) .image img {
+  -webkit-box-shadow: -40px 30px 20px rgba(36, 46, 49, 0.3);
+          box-shadow: -40px 30px 20px rgba(36, 46, 49, 0.3);
+  -webkit-transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
+          transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
 }
 
 html .content section#work .work_container .project:nth-child(even) .description,

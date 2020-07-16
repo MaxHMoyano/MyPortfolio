@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 $primary: #288eda;
 $secondary: #ca1e00;
 $white: #fff;
-$light: #e4e4e4;
+$light: #cfcfcf;
 $gray: #555;
 $dark: #242e31;
 $black: #333;
@@ -18,8 +18,8 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to bottom, $white 20%, $light 80%);
-  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to top, $light 0%, $white 80%);
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-flow: column nowrap;
   color: $dark;
@@ -170,15 +170,26 @@ body {
           justify-content: center;
           .project {
             height: 40vh;
-            box-shadow: 0 2px 16px rgba($color: $dark, $alpha: 0.3);
             transition: all 0.3s ease;
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+            justify-content: space-around;
             margin: 2rem 0;
+            perspective: 500px;
             .description {
-              padding: 1.5rem;
+              border-radius: 20px;
+              padding: 1.5rem 3rem;
               flex: 0 0 50%;
+              box-shadow: 0 2px 16px rgba($color: $dark, $alpha: 0.3);
+              height: 100%;
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              transition: all ease 0.45s;
+              &:hover {
+                transform: translate3d(0, 0, 20px);
+              }
               .tech {
                 margin: 1rem 0;
                 i {
@@ -186,6 +197,7 @@ body {
                 }
               }
               .repo {
+                perspective: 500px;
                 a {
                   text-decoration: none;
                   color: $primary;
@@ -197,14 +209,41 @@ body {
                     margin-left: 0.25rem;
                   }
                   &:hover {
-                    transform: translate3d(0, 2px, 0);
+                    transform: translate3d(0, 0, 10px);
                   }
                 }
               }
             }
-            img {
-              flex: 0 0 20%;
+
+            .image {
+              border-radius: 10px;
+              flex: 0 0 30%;
+              perspective: 500px;
               height: 100%;
+              display: flex;
+              align-items: center;
+              img {
+                transition: all ease 0.4s;
+                height: 80%;
+              }
+            }
+
+            &:nth-child(even) {
+              .image {
+                img {
+                  box-shadow: 40px 30px 20px rgba($color: $dark, $alpha: 0.3);
+                  transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
+                }
+              }
+            }
+
+            &:nth-child(odd) {
+              .image {
+                img {
+                  box-shadow: -40px 30px 20px rgba($color: $dark, $alpha: 0.3);
+                  transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
+                }
+              }
             }
           }
           .project:nth-child(even) {
