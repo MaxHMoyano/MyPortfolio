@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,9 +10,9 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: -webkit-gradient(linear, left bottom, left top, from(#cfcfcf), color-stop(80%, #fff));
-  background: linear-gradient(to top, #cfcfcf 0%, #fff 80%);
-  font-family: 'Roboto', sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1e1c2e), color-stop(80%, #0e1112));
+  background: linear-gradient(to top, #1e1c2e 0%, #0e1112 80%);
+  font-family: 'Work Sans', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  color: #242e31;
+  color: #cfcfcf;
 }
 
 html .navbar,
@@ -154,14 +154,14 @@ body .content section#home .profile .links {
 
 html .content section#home .profile .links a,
 body .content section#home .profile .links a {
-  color: #242e31;
+  color: #cfcfcf;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 html .content section#home .profile .links a:hover,
 body .content section#home .profile .links a:hover {
-  color: #288eda;
+  color: #cfcfcf;
   -webkit-transform: translate3d(0, 0.25rem, 0);
           transform: translate3d(0, 0.25rem, 0);
   opacity: 0.8;
@@ -223,7 +223,7 @@ body .content section#home .menu li a {
   text-align: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  color: #242e31;
+  color: #cfcfcf;
   font-weight: bolder;
   font-size: 3rem;
   -webkit-transition: all 0.5s ease;
@@ -253,6 +253,8 @@ body .content section#skills .skills_container {
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
   row-gap: 1.5rem;
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
 html .content section#skills .skills_container span,
@@ -269,8 +271,8 @@ body .content section#skills .skills_container span i {
 
 html .content section#skills .skills_container span:hover,
 body .content section#skills .skills_container span:hover {
-  -webkit-transform: translate3d(3px, 0, 0);
-          transform: translate3d(3px, 0, 0);
+  -webkit-transform: translate3d(0, 0, 10px);
+          transform: translate3d(0, 0, 10px);
 }
 
 html .content section#work .work_container,
@@ -288,6 +290,11 @@ body .content section#work .work_container {
           justify-content: center;
 }
 
+html .content section#work .work_container > h2,
+body .content section#work .work_container > h2 {
+  font-size: 2.5rem;
+}
+
 html .content section#work .work_container .project,
 body .content section#work .work_container .project {
   height: 40vh;
@@ -303,8 +310,9 @@ body .content section#work .work_container .project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 2rem 0;
   -webkit-perspective: 500px;
           perspective: 500px;
@@ -317,8 +325,8 @@ body .content section#work .work_container .project .description {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  -webkit-box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
-          box-shadow: 0 2px 16px rgba(36, 46, 49, 0.3);
+  -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,7 +367,7 @@ body .content section#work .work_container .project .description .repo {
 html .content section#work .work_container .project .description .repo a,
 body .content section#work .work_container .project .description .repo a {
   text-decoration: none;
-  color: #288eda;
+  color: #cfcfcf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,16 +416,16 @@ body .content section#work .work_container .project .image img {
 
 html .content section#work .work_container .project:nth-child(even) .image img,
 body .content section#work .work_container .project:nth-child(even) .image img {
-  -webkit-box-shadow: 40px 30px 20px rgba(36, 46, 49, 0.3);
-          box-shadow: 40px 30px 20px rgba(36, 46, 49, 0.3);
+  -webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
           transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
 }
 
 html .content section#work .work_container .project:nth-child(odd) .image img,
 body .content section#work .work_container .project:nth-child(odd) .image img {
-  -webkit-box-shadow: -40px 30px 20px rgba(36, 46, 49, 0.3);
-          box-shadow: -40px 30px 20px rgba(36, 46, 49, 0.3);
+  -webkit-box-shadow: -40px 30px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: -40px 30px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
           transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
 }
@@ -520,7 +528,7 @@ body .content section#contact .social .social_list {
 
 html .content section#contact .social .social_list a,
 body .content section#contact .social .social_list a {
-  color: #242e31;
+  color: #cfcfcf;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -530,7 +538,7 @@ body .content section#contact .social .social_list a {
 
 html .content section#contact .social .social_list a:hover,
 body .content section#contact .social .social_list a:hover {
-  color: #ca1e00;
+  color: #cfcfcf;
   opacity: 0.8;
   -webkit-transform: translate3d(0, 0.25rem, 0);
           transform: translate3d(0, 0.25rem, 0);

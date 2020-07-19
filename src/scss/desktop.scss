@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 $primary: #288eda;
 $secondary: #ca1e00;
@@ -18,11 +18,11 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to top, $light 0%, $white 80%);
-  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to top, #1e1c2e 0%, #0e1112 80%);
+  font-family: 'Work Sans', sans-serif;
   display: flex;
   flex-flow: column nowrap;
-  color: $dark;
+  color: $light;
   .navbar {
     padding: 0 5rem;
     grid-area: navbar;
@@ -91,10 +91,10 @@ body {
             justify-content: space-between;
             width: 20%;
             a {
-              color: $dark;
+              color: $light;
               transition: all 0.4s ease;
               &:hover {
-                color: $primary;
+                color: $light;
                 transform: translate3d(0, 0.25rem, 0);
                 opacity: 0.8;
               }
@@ -133,7 +133,7 @@ body {
               text-align: center;
               text-decoration: none;
               padding: 0.5rem 1rem;
-              color: $dark;
+              color: $light;
               font-weight: bolder;
               font-size: 3rem;
               transition: all 0.5s ease;
@@ -150,6 +150,7 @@ body {
           grid-template-columns: repeat(3, 1fr);
           column-gap: 2rem;
           row-gap: 1.5rem;
+          perspective: 500px;
           span {
             i {
               margin-right: 0.5rem;
@@ -157,13 +158,16 @@ body {
             font-size: 1.5rem;
             transition: all ease 0.3s;
             &:hover {
-              transform: translate3d(3px, 0, 0);
+              transform: translate3d(0, 0, 10px);
             }
           }
         }
       }
       &#work {
         .work_container {
+          > h2 {
+            font-size: 2.5rem;
+          }
           padding: 0;
           display: flex;
           flex-flow: column nowrap;
@@ -174,14 +178,14 @@ body {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             margin: 2rem 0;
             perspective: 500px;
             .description {
               border-radius: 20px;
               padding: 1.5rem 3rem;
               flex: 0 0 50%;
-              box-shadow: 0 2px 16px rgba($color: $dark, $alpha: 0.3);
+              box-shadow: 0 2px 16px rgba($color: #000, $alpha: 0.3);
               height: 100%;
               display: flex;
               flex-flow: column;
@@ -200,7 +204,7 @@ body {
                 perspective: 500px;
                 a {
                   text-decoration: none;
-                  color: $primary;
+                  color: $light;
                   display: flex;
                   align-items: center;
                   font-size: 0.75rem;
@@ -231,7 +235,7 @@ body {
             &:nth-child(even) {
               .image {
                 img {
-                  box-shadow: 40px 30px 20px rgba($color: $dark, $alpha: 0.3);
+                  box-shadow: 40px 30px 20px rgba($color: #000, $alpha: 0.3);
                   transform: rotate3d(0, 1, 0, -8deg) translate3d(-3rem, 0, 0);
                 }
               }
@@ -240,7 +244,7 @@ body {
             &:nth-child(odd) {
               .image {
                 img {
-                  box-shadow: -40px 30px 20px rgba($color: $dark, $alpha: 0.3);
+                  box-shadow: -40px 30px 20px rgba($color: #000, $alpha: 0.3);
                   transform: rotate3d(0, 1, 0, 8deg) translate3d(3rem, 0, 0);
                 }
               }
@@ -305,13 +309,13 @@ body {
             justify-content: space-around;
             width: 100%;
             a {
-              color: $dark;
+              color: $light;
               transition: all 0.3s ease;
               cursor: pointer;
               padding: 1rem;
               border-radius: 20%;
               &:hover {
-                color: $secondary;
+                color: $light;
                 opacity: 0.8;
                 transform: translate3d(0, 0.25rem, 0);
               }
