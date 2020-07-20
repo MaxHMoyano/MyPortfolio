@@ -476,7 +476,6 @@ body .content section#work .work_container .project:nth-child(odd) img {
 
 html .content section#contact,
 body .content section#contact {
-  padding: 10rem 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
