@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | MMoyano</title>
-    <link rel="stylesheet" href="./src/scss/desktop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -15,22 +19,31 @@
 
   <body>
     <nav class="navbar">
-      <div class="logo" onclick="goToHome()">
-        <div class="image">
-          <img src="./src/assets/img/myself.jpg" alt="" />
-        </div>
-        <div class="name">
-          <h5>Maximiliano Moyano</h5>
+      <div class="logo">
+        <div
+          onclick="goToHome()"
+          class="name animate__animated animate__backInLeft"
+        >
+          <h5>
+            Maximiliano Moyano
+          </h5>
           <p>Full stack javascript Developer</p>
         </div>
       </div>
+      <ul class="menu">
+        <li id="skills_btn"><a>Skills</a></li>
+        <li id="work_btn"><a>Work</a></li>
+        <li id="contact_btn"><a>Contact</a></li>
+      </ul>
     </nav>
     <main class="content">
-      <section id="home">
+      <section id="home" class="active_section">
         <div class="profile">
-          <h2>Hello! I'm</h2>
-          <h1>Maximiliano Moyano</h1>
-          <div class="links">
+          <h2 class="animate__animated animate__bounceInLeft">Hello! I'm</h2>
+          <h1 class="animate__animated animate__bounceInDown">
+            Maximiliano Moyano
+          </h1>
+          <div class="links animate__animated animate__bounceInUp">
             <a href="https://github.com/MaxHMoyano" target="_blank">
               <i class="fab fa-github fa-3x"></i>
             </a>
@@ -42,35 +55,90 @@
             </a>
           </div>
         </div>
-        <ul class="menu">
-          <li id="skills_btn"><a>Skills</a></li>
-          <li id="work_btn"><a>Work</a></li>
-          <li id="contact_btn"><a>Contact</a></li>
-        </ul>
+        <!-- <div class="myself">
+        </div> -->
       </section>
       <section id="skills">
+        <h2>My skills</h2>
         <div class="skills_container">
-          <span><i class="fab fa-js"></i> Javascript Es6 to Es9</span>
-          <span><i class="fab fa-html5"></i> HTML 5</span>
-          <span><i class="fab fa-css3"></i> Css3</span>
-          <span
-            ><i class="fab fa-sass"></i> <i class="fab fa-less"></i> Pre
-            processors like LESS and SCSS</span
-          >
-          <span><i class="fab fa-react"></i> ReactJs Library</span>
-          <span><i class="fab fa-vuejs"></i> VueJs 2 Framework </span>
-          <span><i class="fab fa-angular"></i> Angular 2+ (7 & 9)</span>
-          <span><i class="fab fa-angular"></i> AngularJs</span>
-          <span><i class="fab fa-node"></i> NodeJs</span>
-          <span><i class="fab fa-node"></i> ExpressJs</span>
-          <span><i class="fas fa-database"></i> MongoDB</span>
-          <span><i class="fas fa-comment-dots"></i> Cypress</span>
+          <div>
+            <div class="icons">
+              <i class="fab fa-js"></i>
+            </div>
+            <span>Javascript Es6 to Es9</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-html5"></i>
+            </div>
+            <span>HTML 5</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-css3"></i>
+            </div>
+            <span>Css3</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-sass"></i> <i class="fab fa-less"></i>
+            </div>
+            <span>LESS and SCSS</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-react"></i>
+            </div>
+            <span>ReactJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-vuejs"></i>
+            </div>
+            <span>VueJs 2</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-angular"></i>
+            </div>
+            <span>Angular 2+ (7 & 9)</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-angular"></i>
+            </div>
+            <span>AngularJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-node"></i>
+            </div>
+            <span>NodeJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-node"></i>
+            </div>
+            <span>ExpressJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fas fa-database"></i>
+            </div>
+            <span>MongoDB</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <span>Cypress</span>
+          </div>
         </div>
-        <h2>And still learning . . .</h2>
       </section>
+
       <section id="work">
+        <h2>My work</h2>
         <div class="work_container">
-          <h2>My work</h2>
           <div class="project">
             <div class="description">
               <h2>Finning - Argos</h2>
@@ -133,10 +201,10 @@
                 <i class="fab fa-html5"></i>
               </div>
               <div class="repo">
-                <!-- <a href="https://github.com/MaxHMoyano/amerian">
+                <a href="https://github.com/MaxHMoyano/amerian">
                   <span>Go take a look at the repo!</span>
                   <i class="fab fa-github"></i>
-                </a> -->
+                </a>
                 <a href="http://admin-test.encuentropilka.com/" target="_blank">
                   <span>Go take a look at production!</span>
                 </a>
@@ -197,7 +265,7 @@
                 </a>
                 <a href="https://coolcovers-15ea7.web.app/" target="_blank">
                   <span>Go take a look at production!</span>
-                  <!-- <i class="fab fa-github"></i> -->
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -210,46 +278,39 @@
           </div>
         </div>
       </section>
-      <!-- <section id="about">
-        Acerca de mi
-      </section> -->
       <section id="contact">
-        <div class="social">
-          <h2>I'm Social</h2>
-          <div class="social_list">
-            <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
-              <i class="fab fa-instagram fa-3x"></i>
-            </a>
-            <a href="https://twitter.com/MaxHMoyano" target="_blank">
-              <i class="fab fa-twitter fa-3x"></i>
-            </a>
-            <a href="https://www.facebook.com/Moyano.Max/" target="_blank">
-              <i class="fab fa-facebook fa-3x"></i>
-            </a>
+        <h2>Wanna talk?</h2>
+        <div class="contact_data">
+          <div class="info_block">
+            <i class="fas fa-paper-plane"></i>
+            <h3>My mail:</h3>
+            <p>maxhmoyano@gmail.com</p>
+          </div>
+          <div class="info_block">
+            <i class="fas fa-mobile"></i>
+            <h3>My phone number:</h3>
+            <p>+54 9 3512 76-6171</p>
+          </div>
+          <div class="info_block">
+            <i class="fab fa-instagram"></i>
+            <h3>Follow me!</h3>
+            <p>
+              <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
+                maxhmoyano
+              </a>
+            </p>
           </div>
         </div>
-        <div class="contact_data">
-          <h2>CONTACT ME</h2>
-          <div class="info-block">
-            <address>
-              Córdoba Capital - Argentina. B° Villa Corina // ZIP: X5012
-            </address>
-            <i class="fas fa-address-card fa-3x"></i>
-          </div>
-          <div class="info-block">
-            <span
-              >MaxHMoyano
-              <i style="width: auto;" class="fas fa-at"></i> Gmail.com
-            </span>
-            <i class="fas fa-envelope-open-text fa-3x"></i>
-          </div>
-          <div class="info-block">
-            <span>+54 3512766171</span>
-            <i class="fas fa-phone-square fa-3x"></i>
-          </div>
+        <div class="options">
+          <a href="./src/assets/documents/CV.docx" target="_blank"
+            >Download CV</a
+          >
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <h2>Always triying to improve myself</h2>
+    </footer>
 
     <script src="https://kit.fontawesome.com/f882bdf9ee.js"></script>
     <script src="./src/scripts/index.js"></script>

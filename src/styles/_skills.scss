@@ -1,0 +1,47 @@
+#skills {
+  padding: 4rem 0;
+  display: flex;
+  flex-flow: column;
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+    flex: 0 0 20%;
+  }
+  .skills_container {
+    flex: 1 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    justify-items: center;
+    > div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background: rgba($color: $black, $alpha: 0.1);
+      font-size: 2.2rem;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: translate3d(0, 2px, 0);
+        opacity: 0.9;
+        color: $primary;
+      }
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        flex: 0 0 30%;
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+      span {
+        flex: 1;
+      }
+    }
+  }
+}

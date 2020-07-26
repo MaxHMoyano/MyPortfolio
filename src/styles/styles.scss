@@ -1,0 +1,112 @@
+// Font import
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --animate-duration: 1000ms;
+  // --animate-delay: 5s;
+}
+
+// Colors
+$primary: #006daa;
+$secondary: #0f8b8d;
+$light: #b6b6b6;
+$black: #000;
+$dark-purple: #1f1d31;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient($dark-purple 15%, $black);
+  font-family: 'Ubuntu', sans-serif;
+  display: grid;
+  flex-flow: column nowrap;
+  color: $light;
+  display: grid;
+  grid-template-rows: 10vh 1fr 10vh;
+  grid-template-areas: 'navbar' 'content' 'footer';
+  .navbar {
+    grid-area: navbar;
+    background: rgba($color: $black, $alpha: 0.1);
+    width: 80%;
+    margin: auto;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: translate3d(5px, 0, 0);
+      }
+      .name {
+        h5 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.5rem;
+          opacity: 0.8;
+        }
+      }
+    }
+    .menu {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      perspective: 500px;
+      li {
+        transition: all ease 0.3s;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          transform: translate3d(0, 0, 3rem);
+          color: $primary;
+        }
+      }
+    }
+  }
+  .content {
+    grid-area: content;
+    height: 80vh;
+    overflow-y: hidden;
+    section {
+      margin: 0 10%;
+      height: 80vh;
+      overflow: hidden;
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+    background: rgba($color: $black, $alpha: 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+@import './home';
+@import './skills';
+@import './work';
+@import './contact';
