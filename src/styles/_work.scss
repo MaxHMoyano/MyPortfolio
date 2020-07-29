@@ -72,6 +72,8 @@
           }
         }
         .repo {
+          display: flex;
+          flex-flow: column nowrap;
           a {
             font-size: 2rem;
             text-decoration: none;
