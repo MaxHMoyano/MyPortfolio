@@ -63,3 +63,50 @@ function goToHome() {
   }, 1000);
   newActiveSection.scrollIntoView();
 }
+
+function goLeft(el) {
+
+  const element = document.querySelector('.project.active')
+  element.classList.remove('active')
+  const previousElement = element.previousElementSibling
+  if (previousElement) {
+    previousElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+    previousElement.classList.add('active')
+  } else {
+    let parent = document.getElementById('work-container')
+    let firstElement = parent.lastElementChild
+    firstElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+    firstElement.classList.add('active')
+  }
+}
+
+function goRight(el) {
+  const element = document.querySelector('.project.active')
+  element.classList.remove('active')
+  const nextElement = element.nextElementSibling
+  if (nextElement) {
+    nextElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+    nextElement.classList.add('active')
+  } else {
+    let parent = document.getElementById('work-container')
+    let firstElement = parent.firstElementChild
+    firstElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+    firstElement.classList.add('active')
+  }
+}

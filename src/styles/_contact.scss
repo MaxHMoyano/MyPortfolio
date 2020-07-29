@@ -3,13 +3,6 @@
   align-items: stretch;
   justify-content: space-between;
   flex-flow: column nowrap;
-  padding: 5rem 0;
-  h2 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
   .contact_data {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,24 +46,21 @@
     perspective: 500px;
     > a {
       text-decoration: none;
-      background: linear-gradient(
-        90deg,
-        lighten($black, 5%) 0%,
-        $dark-purple 100%
-      );
+      background: linear-gradient(90deg, #111 0%, #222 100%);
       color: $light;
       padding: 2rem 6rem;
       border-radius: 5px;
       outline: none;
       border: none;
-      box-shadow: 0 0 40px $black;
+      box-shadow: 0 0 20px #111;
       margin: 0 2rem;
       font-size: 2rem;
       transition: all ease 0.5s;
       cursor: pointer;
       &:hover {
         color: $black;
-        background: $light;
+        background: linear-gradient(90deg, #777 0%, #fff 100%);
+        box-shadow: 0 0 20px #333;
         transform: translate3d(0, 0, 20px);
       }
     }

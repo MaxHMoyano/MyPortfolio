@@ -1,22 +1,95 @@
 #work {
+  position: relative;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
+  align-items: stretch;
+  button.direction {
+    position: absolute;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    color: $black;
+    background: #f4f4f4;
+    transition: all ease .5s;
+    &:hover {
+      color: $primary;
+    }
+    &.left {
+      left: 0;
+      bottom: 45%;
+      &:hover {
+        transform: translate3d(-5px, 0, 0);
+      }
+    }
+    &.right {
+      right: 0;
+      bottom: 45%;
+      &:hover {
+        transform: translate3d(5px, 0, 0);
+      }
+    }
+    i {
+      font-size: 2rem;
+    }
   }
   .work_container {
+    flex: 1;
     display: flex;
     flex-flow: row nowrap;
-    overflow-x: auto;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 4rem;
     .project {
-      width: 80vw;
-      padding: 2rem;
+      flex: 0 0 100%;
+      padding: 5rem;
+      border-radius: 15px;
+      margin-right: 3rem;
+      display: flex;
+      .description {
+        flex: 0 0 60%;
+        padding: 0 2rem;
+        * {
+          margin-bottom: 2rem;
+        }
+        h3 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+        .tech {
+          display: flex;
+          i {
+            flex: 0 0 10%;
+            font-size: 4rem;
+          }
+        }
+        .repo {
+          a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: $light;
+            transition: all ease .3s;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
       .image {
+        flex: 1;
+        padding: 0 2rem;
         img {
-          width: 30%;
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 0 20px $black;
         }
       }
     }

@@ -1,11 +1,9 @@
 #skills {
-  padding: 4rem 0;
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
   h2 {
-    font-size: 4rem;
-    text-align: center;
-    flex: 0 0 20%;
+    margin-bottom: 2.5rem;
   }
   .skills_container {
     flex: 1 0;

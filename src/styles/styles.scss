@@ -9,7 +9,7 @@
 // Colors
 $primary: #006daa;
 $secondary: #0f8b8d;
-$light: #b6b6b6;
+$light: #eee;
 $black: #000;
 $dark-purple: #1f1d31;
 
@@ -27,7 +27,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: radial-gradient($dark-purple 15%, $black);
+  background: radial-gradient($dark-purple 30%, $black);
   font-family: 'Ubuntu', sans-serif;
   display: grid;
   flex-flow: column nowrap;
@@ -85,11 +85,11 @@ body {
   .content {
     grid-area: content;
     height: 80vh;
-    overflow-y: hidden;
+    overflow-y: auto;
     section {
       margin: 0 10%;
+      padding: 5rem 0;
       height: 80vh;
-      overflow: hidden;
     }
   }
 
@@ -97,13 +97,44 @@ body {
     grid-area: footer;
     background: rgba($color: $black, $alpha: 0.1);
     display: flex;
-    justify-content: center;
-    padding: 3rem;
-    h2 {
-      font-size: 1.5rem;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    p {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        margin-right: 1rem;
+      }
+      font-size: 2rem;
       font-weight: lighter;
     }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      a {
+        color: $light;
+        text-decoration: none;
+        font-size: 2.5rem;
+        margin: 0 2rem;
+        transition: all ease .3s;
+        &:hover {
+          color: $secondary;
+          transform: translate3d(0, 3px, 0);
+        }
+      }
+    }
   }
+}
+
+
+
+h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 @import './home';
