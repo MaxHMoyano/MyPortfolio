@@ -437,7 +437,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 4rem;
 }
 
@@ -512,6 +512,15 @@ h2 {
       -ms-flex: 1;
           flex: 1;
   padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #work .work_container .project .image img {
