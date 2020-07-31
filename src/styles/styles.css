@@ -498,13 +498,15 @@ h2 {
 #work .work_container .project .description .repo a {
   font-size: 2rem;
   text-decoration: none;
-  color: #eee;
+  color: #006daa;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
 }
 
 #work .work_container .project .description .repo a:hover {
-  color: #006daa;
+  color: #0f8b8d;
+  -webkit-transform: translate3d(0, 5px, 0);
+          transform: translate3d(0, 5px, 0);
 }
 
 #work .work_container .project .image {

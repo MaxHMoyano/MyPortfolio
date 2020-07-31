@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.classList.add('active');
 
       // Previous active section's got to fade out
-      let activeSection = document.getElementsByClassName('active_section')[0];
+      let activeSection = document.querySelector('#active_section');
       activeSection.classList.add('animate__animated', 'animate__fadeOut');
       activeSection.classList.remove('active_section');
       setTimeout(() => {
