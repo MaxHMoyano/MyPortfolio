@@ -1,315 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio | MMoyano</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./src/assets/icon/custom – 2.ico"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Portfolio | MMoyano</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-  <link rel="stylesheet" href="./src/styles/styles.css" />
-  <link rel="shortcut icon" type="image/png" href="./src/assets/icon/custom – 2.ico" />
+    <!-- Open Graph Protocol -->
+    <meta property="og:image" content="./src/assets/img/thumbnail.png" />
+    <meta
+      property="og:title"
+      content="Max Moyano - A fullstack javascript developer"
+    />
+    <meta property="og:url" content="https://maxhmoyano.github.io/portfolio/" />
+  </head>
 
-  <!-- Open Graph Protocol -->
-  <meta property="og:image" content="./src/assets/img/thumbnail.png" />
-  <meta property="og:title" content="Max Moyano - A fullstack javascript developer" />
-  <meta property="og:url" content="https://maxhmoyano.github.io/portfolio/" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="logo">
-      <div onclick="goToHome()" class="name animate__animated animate__backInLeft">
-        <h5>
-          Maximiliano Moyano
-        </h5>
-        <p>Full stack javascript Developer</p>
-      </div>
-    </div>
-    <ul class="menu">
-      <li id="skills_btn"><a>Skills</a></li>
-      <li id="work_btn"><a>Work</a></li>
-      <li id="contact_btn"><a>Contact</a></li>
-    </ul>
-  </nav>
-  <main class="content">
-    <section id="home" class="active_section">
-      <div class="profile">
-        <h3 class="animate__animated animate__bounceInLeft">Hello! I'm</h3>
-        <h1 class="animate__animated animate__bounceInDown">
-          Maximiliano Moyano
-        </h1>
-        <p class="animate__animated animate__bounceInDown">I'm a full stack Javascript developer with 3+ years of
-          experience so far, I'm specialized on ReactJs development and I'd love to work with you! </p>
-        <div class="links animate__animated animate__bounceInUp">
-          <a href="https://github.com/MaxHMoyano" target="_blank">
-            <i class="fab fa-github fa-3x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/" target="_blank">
-            <i class="fab fa-linkedin fa-3x"></i>
-          </a>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <div
+          onclick="goToHome()"
+          class="name animate__animated animate__backInLeft"
+        >
+          <h5>
+            Maximiliano Moyano
+          </h5>
+          <p>Full stack javascript Developer</p>
         </div>
       </div>
-      <!-- <div class="myself">
+      <ul class="menu">
+        <li id="skills_btn"><a>Skills</a></li>
+        <li id="work_btn"><a>Work</a></li>
+        <li id="contact_btn"><a>Contact</a></li>
+      </ul>
+    </nav>
+    <main class="content">
+      <section id="home" class="active_section">
+        <div class="profile">
+          <h3 class="animate__animated animate__bounceInLeft">Hello! I'm</h3>
+          <h1 class="animate__animated animate__bounceInDown">
+            Maximiliano Moyano
+          </h1>
+          <p class="animate__animated animate__bounceInDown">
+            I'm a full stack Javascript developer with 3+ years of experience so
+            far, I'm specialized on ReactJs development and I'd love to work
+            with you!
+          </p>
+          <div class="links animate__animated animate__bounceInUp">
+            <a href="https://github.com/MaxHMoyano" target="_blank">
+              <i class="fab fa-github fa-3x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="myself">
         </div> -->
-    </section>
-    <section id="skills">
-      <h2>My skills</h2>
-      <div class="skills_container">
-        <div>
-          <div class="icons">
-            <i class="fab fa-js"></i>
-          </div>
-          <span>Javascript Es6 to Es9</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-html5"></i>
-          </div>
-          <span>HTML 5</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-css3"></i>
-          </div>
-          <span>Css3</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-sass"></i> <i class="fab fa-less"></i>
-          </div>
-          <span>LESS and SCSS</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-react"></i>
-          </div>
-          <span>ReactJs</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-vuejs"></i>
-          </div>
-          <span>VueJs 2</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-angular"></i>
-          </div>
-          <span>Angular 2+ (7 & 9)</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-angular"></i>
-          </div>
-          <span>AngularJs</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-node"></i>
-          </div>
-          <span>NodeJs</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fab fa-node"></i>
-          </div>
-          <span>ExpressJs</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fas fa-database"></i>
-          </div>
-          <span>MongoDB</span>
-        </div>
-        <div>
-          <div class="icons">
-            <i class="fas fa-comment-dots"></i>
-          </div>
-          <span>Cypress</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <button class="direction left" onclick="goLeft(this)">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="direction right" onclick="goRight(this)">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-      <h2>My work</h2>
-      <div id="work-container" class="work_container">
-        <div class="project active">
-          <div class="description">
-            <h3>Finning - Argos</h3>
-            <p>
-              It was my first professional work, I entered QPlus Software
-              Solutions on 2017. This system was a JQuery based monitoring
-              system for Caterpillar automatized trucks. A very basic
-              dashboard and a very heavy form | table system.
-            </p>
-            <div class="tech">
+      </section>
+      <section id="skills">
+        <h2>My skills</h2>
+        <div class="skills_container">
+          <div>
+            <div class="icons">
               <i class="fab fa-js"></i>
-              <i class="fab fa-css3"></i>
+            </div>
+            <span>Javascript Es6 to Es9</span>
+          </div>
+          <div>
+            <div class="icons">
               <i class="fab fa-html5"></i>
             </div>
-            <div class="repo">
-              <a href="https://argos-finsa.finning.com/" target="_blank">
-                Go take a look at production!
-              </a>
-            </div>
+            <span>HTML 5</span>
           </div>
-          <div class="image">
-            <img src="./src/assets/img/projects/argos.jpg" alt="project" />
-          </div>
-        </div>
-        <div class="project">
-          <div class="description">
-            <h3>Amerian Project</h3>
-            <p>
-              Amerian was a dashboard client made in React to manage human
-              resources and room renting for a known Hotel Brand here in
-              Argentina
-            </p>
-            <div class="tech">
+          <div>
+            <div class="icons">
               <i class="fab fa-css3"></i>
-              <i class="fab fa-html5"></i>
+            </div>
+            <span>Css3</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-sass"></i> <i class="fab fa-less"></i>
+            </div>
+            <span>LESS and SCSS</span>
+          </div>
+          <div>
+            <div class="icons">
               <i class="fab fa-react"></i>
             </div>
-            <div class="repo">
-              <a href="https://github.com/MaxHMoyano/amerian" target="_blank">
-                <span>Go take a look at the repo!</span>
-              </a>
+            <span>ReactJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-vuejs"></i>
             </div>
+            <span>VueJs 2</span>
           </div>
-          <div class="image">
-            <img src="./src/assets/img/projects/amerian.png" alt="project" />
-          </div>
-        </div>
-        <div class="project">
-          <div class="description">
-            <h3>Pilka WebApp</h3>
-            <p>
-              Pilka was an Angular project made to manage multiple sport
-              centers and their reservations. (I can't share this repo because
-              of my contract)
-            </p>
-            <div class="tech">
+          <div>
+            <div class="icons">
               <i class="fab fa-angular"></i>
-              <i class="fab fa-css3"></i>
-              <i class="fab fa-html5"></i>
             </div>
-            <div class="repo">
-              <a href="http://admin-test.encuentropilka.com/" target="_blank">
-                <span>Go take a look at production!</span>
-              </a>
+            <span>Angular 2+ (7 & 9)</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fab fa-angular"></i>
             </div>
+            <span>AngularJs</span>
           </div>
-          <div class="image">
-            <img src="./src/assets/img/projects/pilka.png" alt="project" />
-          </div>
-        </div>
-        <div class="project">
-
-          <div class="description">
-            <h3>Project Manager API</h3>
-            <p>
-              A personal API made to organize my different projects and duties
-              in a day. Several endpoints to make projects and children tasks.
-              The project used Express framework and the NOSQL MongoDB
-              database
-            </p>
-            <div class="tech">
+          <div>
+            <div class="icons">
               <i class="fab fa-node"></i>
             </div>
-            <div class="repo">
-              <a href="https://github.com/MaxHMoyano/projects-manager-API" target="_blank">
-                <span>Go take a look at the repo!</span>
-              </a>
-            </div>
+            <span>NodeJs</span>
           </div>
-          <div class="image">
-            <img src="./src/assets/img/projects/project-manager.png" alt="project" />
+          <div>
+            <div class="icons">
+              <i class="fab fa-node"></i>
+            </div>
+            <span>ExpressJs</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fas fa-database"></i>
+            </div>
+            <span>MongoDB</span>
+          </div>
+          <div>
+            <div class="icons">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <span>Cypress</span>
           </div>
         </div>
-        <div class="project">
-          <div class="description">
-            <h3>CoolCovers store</h3>
+      </section>
+
+      <section id="work">
+        <button class="direction left" onclick="goLeft(this)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="direction right" onclick="goRight(this)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <h2>My work</h2>
+        <div id="work-container" class="work_container">
+          <div class="project active">
+            <div class="description">
+              <h3>Finning - Argos</h3>
+              <p>
+                It was my first professional work, I entered QPlus Software
+                Solutions on 2017. This system was a JQuery based monitoring
+                system for Caterpillar automatized trucks. A very basic
+                dashboard and a very heavy form | table system.
+              </p>
+              <div class="tech">
+                <i class="fab fa-js"></i>
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="repo">
+                <a href="https://argos-finsa.finning.com/" target="_blank">
+                  Go take a look at production!
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./src/assets/img/projects/argos.jpg" alt="project" />
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h3>Amerian Project</h3>
+              <p>
+                Amerian was a dashboard client made in React to manage human
+                resources and room renting for a known Hotel Brand here in
+                Argentina
+              </p>
+              <div class="tech">
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="repo">
+                <a href="https://github.com/MaxHMoyano/amerian" target="_blank">
+                  <span>Go take a look at the repo!</span>
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./src/assets/img/projects/amerian.png" alt="project" />
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h3>Pilka WebApp</h3>
+              <p>
+                Pilka was an Angular project made to manage multiple sport
+                centers and their reservations. (I can't share this repo because
+                of my contract)
+              </p>
+              <div class="tech">
+                <i class="fab fa-angular"></i>
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="repo">
+                <a href="http://admin-test.encuentropilka.com/" target="_blank">
+                  <span>Go take a look at production!</span>
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./src/assets/img/projects/pilka.png" alt="project" />
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h3>Project Manager API</h3>
+              <p>
+                A personal API made to organize my different projects and duties
+                in a day. Several endpoints to make projects and children tasks.
+                The project used Express framework and the NOSQL MongoDB
+                database
+              </p>
+              <div class="tech">
+                <i class="fab fa-node"></i>
+              </div>
+              <div class="repo">
+                <a
+                  href="https://github.com/MaxHMoyano/projects-manager-API"
+                  target="_blank"
+                >
+                  <span>Go take a look at the repo!</span>
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img
+                src="./src/assets/img/projects/project-manager.png"
+                alt="project"
+              />
+            </div>
+          </div>
+          <div class="project">
+            <div class="description">
+              <h3>CoolCovers store</h3>
+              <p>
+                A react project to manage phone and peripherals sellings of a
+                local Phone Store
+              </p>
+              <div class="tech">
+                <i class="fab fa-css3"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="repo">
+                <a
+                  href="https://github.com/MaxHMoyano/phone-store-client"
+                  target="_blank"
+                >
+                  <span>Go take a look at the repo!</span>
+                </a>
+                <a href="https://tiendacoolcovers.com/" target="_blank">
+                  <span>Go take a look at production!</span>
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img
+                src="./src/assets/img/projects/coolcovers.png"
+                alt="project"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Wanna talk?</h2>
+        <div class="contact_data">
+          <div class="info_block">
+            <i class="fas fa-paper-plane"></i>
+            <h3>My mail:</h3>
             <p>
-              A react project to manage phone and peripherals sellings of a
-              local Phone Store
+              <a href="mailto:maxhmoyano@gmail.com">
+                maxhmoyano@gmail.com
+              </a>
             </p>
-            <div class="tech">
-              <i class="fab fa-css3"></i>
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-react"></i>
-            </div>
-            <div class="repo">
-              <a href="https://github.com/MaxHMoyano/phone-store-client" target="_blank">
-                <span>Go take a look at the repo!</span>
-              </a>
-              <a href="https://tiendacoolcovers.com/" target="_blank">
-                <span>Go take a look at production!</span>
-              </a>
-            </div>
           </div>
-          <div class="image">
-            <img src="./src/assets/img/projects/coolcovers.png" alt="project" />
+          <div class="info_block">
+            <i class="fas fa-mobile"></i>
+            <h3>My phone number:</h3>
+            <p>
+              <a onclick="openWhatsappMessage()" target="_blank">
+                +54 9 3512 76-6171
+              </a>
+            </p>
+          </div>
+          <div class="info_block">
+            <i class="fab fa-instagram"></i>
+            <h3>Follow me!</h3>
+            <p>
+              <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
+                maxhmoyano
+              </a>
+            </p>
           </div>
         </div>
+        <div class="options">
+          <a href="./src/assets/documents/CV.docx" target="_blank"
+            >Download CV</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="icons">
+        <a
+          href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/MaxHMoyano" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
-    </section>
-    <section id="contact">
-      <h2>Wanna talk?</h2>
-      <div class="contact_data">
-        <div class="info_block">
-          <i class="fas fa-paper-plane"></i>
-          <h3>My mail:</h3>
-          <p>maxhmoyano@gmail.com</p>
-        </div>
-        <div class="info_block">
-          <i class="fas fa-mobile"></i>
-          <h3>My phone number:</h3>
-          <p>+54 9 3512 76-6171</p>
-        </div>
-        <div class="info_block">
+      <p><i class="fas fa-mug-hot"></i> Always triying to improve myself</p>
+      <div class="icons">
+        <a href="https://github.com/MaxHMoyano" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
           <i class="fab fa-instagram"></i>
-          <h3>Follow me!</h3>
-          <p>
-            <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
-              maxhmoyano
-            </a>
-          </p>
-        </div>
+        </a>
       </div>
-      <div class="options">
-        <a href="./src/assets/documents/CV.docx" target="_blank">Download CV</a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="icons">
-      <a href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://twitter.com/MaxHMoyano" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-    <p> <i class="fas fa-mug-hot"></i> Always triying to improve myself</p>
-    <div class="icons">
-      <a href="https://github.com/MaxHMoyano" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://kit.fontawesome.com/f882bdf9ee.js"></script>
-  <script src="./src/scripts/index.js"></script>
-</body>
-
+    <script src="https://kit.fontawesome.com/f882bdf9ee.js"></script>
+    <script src="./src/scripts/index.js"></script>
+  </body>
 </html>
