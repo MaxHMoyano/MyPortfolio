@@ -599,6 +599,7 @@ h2 {
 }
 
 #contact .contact_data .info_block p a {
+  cursor: pointer;
   text-decoration: none;
   color: #eee;
 }

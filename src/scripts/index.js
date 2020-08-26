@@ -65,48 +65,52 @@ function goToHome() {
 }
 
 function goLeft(el) {
-
-  const element = document.querySelector('.project.active')
-  element.classList.remove('active')
-  const previousElement = element.previousElementSibling
+  const element = document.querySelector('.project.active');
+  element.classList.remove('active');
+  const previousElement = element.previousElementSibling;
   if (previousElement) {
     previousElement.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
-      inline: 'center'
-    })
-    previousElement.classList.add('active')
+      inline: 'center',
+    });
+    previousElement.classList.add('active');
   } else {
-    let parent = document.getElementById('work-container')
-    let firstElement = parent.lastElementChild
+    let parent = document.getElementById('work-container');
+    let firstElement = parent.lastElementChild;
     firstElement.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
-      inline: 'center'
-    })
-    firstElement.classList.add('active')
+      inline: 'center',
+    });
+    firstElement.classList.add('active');
   }
 }
 
 function goRight(el) {
-  const element = document.querySelector('.project.active')
-  element.classList.remove('active')
-  const nextElement = element.nextElementSibling
+  const element = document.querySelector('.project.active');
+  element.classList.remove('active');
+  const nextElement = element.nextElementSibling;
   if (nextElement) {
     nextElement.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
-      inline: 'center'
-    })
-    nextElement.classList.add('active')
+      inline: 'center',
+    });
+    nextElement.classList.add('active');
   } else {
-    let parent = document.getElementById('work-container')
-    let firstElement = parent.firstElementChild
+    let parent = document.getElementById('work-container');
+    let firstElement = parent.firstElementChild;
     firstElement.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
-      inline: 'center'
-    })
-    firstElement.classList.add('active')
+      inline: 'center',
+    });
+    firstElement.classList.add('active');
   }
+}
+
+function openWhatsappMessage() {
+  const url = `https://api.whatsapp.com/send?phone=+54 9 3512 76-6171`;
+  window.open(url, '_blank');
 }
