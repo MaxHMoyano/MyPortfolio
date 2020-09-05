@@ -76,6 +76,7 @@ body .navbar .logo {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   padding: 3rem 2.5rem;
+  width: 100%;
 }
 
 body .navbar .logo:hover {
