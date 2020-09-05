@@ -31,8 +31,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   display: -ms-grid;
   display: grid;
-  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #1e1e1e), to(#0f0f0f));
-  background: linear-gradient(to left, #1e1e1e 30%, #0f0f0f);
+  background: #1e1e1e;
   color: #cfcfcf;
   display: grid;
   -ms-grid-rows: 1fr;
@@ -46,7 +45,7 @@ body .navbar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: navbar;
-  background: rgba(15, 15, 15, 0.9);
+  background: #0f0f0f;
   width: 15vw;
   display: -webkit-box;
   display: -ms-flexbox;

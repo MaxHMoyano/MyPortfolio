@@ -4,7 +4,7 @@ body {
   overflow: hidden;
   font-family: 'Ubuntu', sans-serif;
   display: grid;
-  background: linear-gradient(to left, $grey 30%, $dark);
+  background: $grey;
   color: $light;
   display: grid;
   grid-template-rows: 1fr;
@@ -13,7 +13,7 @@ body {
 
   .navbar {
     grid-area: navbar;
-    background: rgba($color: $dark, $alpha: .9);
+    background: $dark;
     width: 15vw;
     display: flex;
     flex-flow: column nowrap;
