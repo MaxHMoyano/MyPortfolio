@@ -2,9 +2,11 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+
   h2 {
     margin-bottom: 2.5rem;
   }
+
   .skills_container {
     flex: 1 0;
     display: grid;
@@ -12,31 +14,37 @@
     column-gap: 2rem;
     row-gap: 1.5rem;
     justify-items: center;
-    > div {
+
+    >div {
       height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 20px;
-      background: rgba($color: $black, $alpha: 0.1);
-      font-size: 2.2rem;
+      border-radius: 1rem;
+      background: rgba($color: $dark, $alpha: 0.8);
+      font-size: 2rem;
       transition: all ease 0.3s;
+      padding: 3rem;
+
       &:hover {
         transform: translate3d(0, 2px, 0);
         opacity: 0.9;
         color: $primary;
       }
+
       .icons {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 1rem;
-        flex: 0 0 30%;
+        flex: 0 0 20%;
+
         i {
           margin-right: 0.5rem;
         }
       }
+
       span {
         flex: 1;
       }

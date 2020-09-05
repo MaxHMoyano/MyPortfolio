@@ -21,19 +21,58 @@
     <div class="logo">
       <div onclick="goToHome()" class="name animate__animated animate__backInLeft">
         <h5>
-          Maximiliano Moyano
+          <strong class="text-primary">M</strong>aximiliano
         </h5>
-        <p>Full stack javascript Developer</p>
+        <h5>
+          <strong class="text-primary">M</strong>oyano
+
+        </h5>
+        <p>Full stack Javascript Developer</p>
       </div>
     </div>
     <ul class="menu">
-      <li id="skills_btn"><a>Skills</a></li>
-      <li id="work_btn"><a>Work</a></li>
-      <li id="contact_btn"><a>Contact</a></li>
+      <li id="home_btn">
+        <a>
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li id="skills_btn">
+        <a>
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>Skills</span>
+        </a>
+      </li>
+      <li id="work_btn">
+        <a>
+          <i class="fas fa-briefcase"></i>
+          <span>Work</span>
+        </a>
+      </li>
+      <li id="contact_btn">
+        <a>
+          <i class="fas fa-address-book"></i>
+          <span>Contact</span>
+        </a>
+      </li>
     </ul>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://twitter.com/MaxHMoyano" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/MaxHMoyano" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </nav>
   <main class="content">
-    <section id="home" class="active_section">
+    <section id="home">
       <div class="profile">
         <h3 class="animate__animated animate__bounceInLeft">Hello! I'm</h3>
         <h1 class="animate__animated animate__bounceInDown">
@@ -45,11 +84,8 @@
           with you!
         </p>
         <div class="links animate__animated animate__bounceInUp">
-          <a href="https://github.com/MaxHMoyano" target="_blank">
-            <i class="fab fa-github fa-3x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/" target="_blank">
-            <i class="fab fa-linkedin fa-3x"></i>
+          <a href="./src/assets/documents/CV.pdf" class="download_cv" target="_blank">
+            Download CV
           </a>
         </div>
       </div>
@@ -79,7 +115,7 @@
         </div>
         <div>
           <div class="icons">
-            <i class="fab fa-sass"></i> <i class="fab fa-less"></i>
+            <i class="fab fa-sass"></i>
           </div>
           <span>LESS and SCSS</span>
         </div>
@@ -158,7 +194,7 @@
               <i class="fab fa-html5"></i>
             </div>
             <div class="repo">
-              <a href="https://argos-finsa.finning.com/" target="_blank">
+              <a class="project_btn" href="https://argos-finsa.finning.com/" target="_blank">
                 Go take a look at production!
               </a>
             </div>
@@ -181,7 +217,7 @@
               <i class="fab fa-react"></i>
             </div>
             <div class="repo">
-              <a href="https://github.com/MaxHMoyano/amerian" target="_blank">
+              <a class="project_btn" href="https://github.com/MaxHMoyano/amerian" target="_blank">
                 <span>Go take a look at the repo!</span>
               </a>
             </div>
@@ -204,7 +240,7 @@
               <i class="fab fa-html5"></i>
             </div>
             <div class="repo">
-              <a href="http://admin-test.encuentropilka.com/" target="_blank">
+              <a class="project_btn" href="http://admin-test.encuentropilka.com/" target="_blank">
                 <span>Go take a look at production!</span>
               </a>
             </div>
@@ -226,7 +262,7 @@
               <i class="fab fa-node"></i>
             </div>
             <div class="repo">
-              <a href="https://github.com/MaxHMoyano/projects-manager-API" target="_blank">
+              <a class="project_btn" href="https://github.com/MaxHMoyano/projects-manager-API" target="_blank">
                 <span>Go take a look at the repo!</span>
               </a>
             </div>
@@ -248,10 +284,10 @@
               <i class="fab fa-react"></i>
             </div>
             <div class="repo">
-              <a href="https://github.com/MaxHMoyano/phone-store-client" target="_blank">
+              <a class="project_btn" href="https://github.com/MaxHMoyano/phone-store-client" target="_blank">
                 <span>Go take a look at the repo!</span>
               </a>
-              <a href="https://tiendacoolcovers.com/" target="_blank">
+              <a class="project_btn" href="https://tiendacoolcovers.com/" target="_blank">
                 <span>Go take a look at production!</span>
               </a>
             </div>
@@ -294,29 +330,10 @@
         </div>
       </div>
       <div class="options">
-        <a href="./src/assets/documents/CV.pdf" target="_blank">Download CV</a>
+        <a class="download_cv" href="./src/assets/documents/CV.pdf" target="_blank">Download CV</a>
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="icons">
-      <a href="https://www.linkedin.com/in/maximiliano-moyano-a6a8b814b/" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://twitter.com/MaxHMoyano" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-    <p><i class="fas fa-mug-hot"></i> Always triying to improve myself</p>
-    <div class="icons">
-      <a href="https://github.com/MaxHMoyano" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.instagram.com/maxhmoyano/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </footer>
 
   <script src="https://kit.fontawesome.com/f882bdf9ee.js"></script>
   <script src="./src/scripts/index.js"></script>

@@ -3,6 +3,7 @@
   display: flex;
   flex-flow: column;
   align-items: stretch;
+
   button.direction {
     position: absolute;
     cursor: pointer;
@@ -15,30 +16,37 @@
     justify-content: center;
     outline: none;
     border: none;
-    color: $black;
+    color: $dark;
     background: #f4f4f4;
     transition: all ease .5s;
+
     &:hover {
       color: $primary;
     }
+
     &.left {
       left: 0;
       bottom: 45%;
+
       &:hover {
         transform: translate3d(-5px, 0, 0);
       }
     }
+
     &.right {
       right: 0;
       bottom: 45%;
+
       &:hover {
         transform: translate3d(5px, 0, 0);
       }
     }
+
     i {
       font-size: 2rem;
     }
   }
+
   .work_container {
     flex: 1;
     display: flex;
@@ -46,56 +54,57 @@
     align-items: center;
     overflow: hidden;
     padding: 4rem;
+
     .project {
       flex: 0 0 100%;
       padding: 5rem;
       border-radius: 15px;
       margin-right: 3rem;
       display: flex;
+
       .description {
         flex: 0 0 60%;
         padding: 0 2rem;
+
         * {
           margin-bottom: 2rem;
         }
+
         h3 {
           font-size: 3rem;
         }
+
         p {
           font-size: 2rem;
         }
+
         .tech {
           display: flex;
+
           i {
             flex: 0 0 10%;
-            font-size: 4rem;
+            font-size: 3rem;
           }
         }
+
         .repo {
           display: flex;
           flex-flow: column nowrap;
-          a {
-            font-size: 2rem;
-            text-decoration: none;
-            color: $primary;
-            transition: all ease .3s;
-            &:hover {
-              color: $secondary;
-              transform: translate3d(0, 5px, 0);
-            }
-          }
+          align-items: flex-start;
         }
       }
+
       .image {
         flex: 1;
         padding: 0 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
           width: 100%;
           border-radius: 10px;
-          box-shadow: 0 0 20px $black;
+          box-shadow: 0 0 20px $dark;
         }
       }
     }

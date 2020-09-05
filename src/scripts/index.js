@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Handler when the DOM is fully loaded
   let buttons = document.querySelectorAll(
-    '#work_btn, #skills_btn, #contact_btn',
+    '#home_btn, #work_btn, #skills_btn, #contact_btn',
   );
   buttons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -10,28 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
       buttons.forEach((btn) => btn.classList.remove('active'));
       btn.classList.add('active');
 
-      // Previous active section's got to fade out
-      let activeSection = document.querySelector('.active_section');
-      activeSection.classList.add('animate__animated', 'animate__fadeOut');
-      activeSection.classList.remove('active_section');
-      setTimeout(() => {
-        activeSection.classList.remove('animate__fadeOut', 'animate__fadeIn');
-      }, 1000);
-
       // Current active section's got to fade in
       let newActiveSection = document.getElementById(sectionId);
-      newActiveSection.classList.add(
-        'active_section',
-        'animate__animated',
-        'animate__fadeIn',
-      );
-      setTimeout(() => {
-        newActiveSection.classList.remove(
-          'animate__fadeOut',
-          'animate__fadeIn',
-        );
-      }, 1000);
-      newActiveSection.scrollIntoView();
+      newActiveSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'center',
+      });
     });
   });
 });
@@ -44,24 +29,12 @@ function goToHome() {
   buttons.forEach((btn) => btn.classList.remove('active'));
 
   // Previous active section's got to fade out
-  let activeSection = document.getElementsByClassName('active_section')[0];
-  activeSection.classList.add('animate__animated', 'animate__fadeOut');
-  activeSection.classList.remove('active_section');
-  setTimeout(() => {
-    activeSection.classList.remove('animate__fadeOut', 'animate__fadeIn');
-  }, 1000);
-
-  // Current active section's got to fade in
-  let newActiveSection = document.getElementById('home');
-  newActiveSection.classList.add(
-    'active_section',
-    'animate__animated',
-    'animate__fadeIn',
-  );
-  setTimeout(() => {
-    newActiveSection.classList.remove('animate__fadeOut', 'animate__fadeIn');
-  }, 1000);
-  newActiveSection.scrollIntoView();
+  let home = document.getElementById('home')
+  home.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'center',
+  })
 }
 
 function goLeft(el) {
