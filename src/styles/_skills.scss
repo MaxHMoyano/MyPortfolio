@@ -15,39 +15,107 @@
     row-gap: 1.5rem;
     justify-items: center;
 
-    >div {
+    .skill {
+      display: flex;
+      flex-flow: column nowrap;
+      background: rgba($color: $dark, $alpha: 0.8);
+      border-radius: 1rem;
       height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1rem;
-      background: rgba($color: $dark, $alpha: 0.8);
-      font-size: 2rem;
-      transition: all ease 0.3s;
-      padding: 3rem;
+
+
+
+      .name {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        transition: all ease 0.3s;
+        padding: 3rem;
+
+        .icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          flex: 0 0 20%;
+
+          i {
+            margin-right: 0.5rem;
+          }
+        }
+
+        span {
+          flex: 1;
+        }
+      }
 
       &:hover {
         transform: translate3d(0, 2px, 0);
         opacity: 0.9;
         color: $primary;
-      }
 
-      .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 1rem;
-        flex: 0 0 20%;
+        .progress {
+          height: 20%;
 
-        i {
-          margin-right: 0.5rem;
+          .progress_track {
+            span {
+              display: inline;
+            }
+          }
         }
       }
 
-      span {
-        flex: 1;
+      .progress {
+        display: flex;
+        height: 0;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-end;
+        transition: all ease .3s;
+
+
+        .progress_track {
+          background: $primary;
+          height: 30%;
+          position: relative;
+
+          span {
+            position: absolute;
+            display: none;
+            bottom: 1rem;
+            left: 0;
+          }
+
+
+          &.w_20 {
+            flex: 0 0 20%;
+          }
+
+          &.w_40 {
+            flex: 0 0 40%;
+          }
+
+          &.w_60 {
+            flex: 0 0 60%;
+          }
+
+          &.w_80 {
+            flex: 0 0 80%;
+          }
+
+          &.w_90 {
+            flex: 0 0 90%;
+          }
+
+          &.w_100 {
+            flex: 0 0 100%;
+          }
+
+        }
       }
     }
+
   }
 }
