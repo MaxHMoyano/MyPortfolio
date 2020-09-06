@@ -59,7 +59,6 @@
       flex: 0 0 100%;
       padding: 5rem;
       border-radius: 15px;
-      margin-right: 3rem;
       display: flex;
 
       .description {
@@ -111,3 +110,65 @@
     }
   }
 }
+
+
+// Large screens
+@media screen and (max-width: 1200px) {
+  #work {
+
+    .work_container {
+
+      .project {
+        .description {
+          flex: 1;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+          }
+
+          .tech {
+            display: none;
+          }
+
+          .project_btn {
+            font-size: 1.25rem;
+          }
+        }
+
+        .image {
+          display: none;
+        }
+      }
+
+    }
+  }
+}
+
+// Medium screens
+@media screen and (max-width: 992px) {
+  #work {
+
+    button.direction {
+      display: none;
+    }
+
+    .work_container {
+      overflow-x: auto;
+
+      .project {
+        padding: 1rem;
+
+        .description {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+// Mobile screens
+@media screen and (max-width: 768px) {}

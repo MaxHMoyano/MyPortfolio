@@ -56,3 +56,20 @@
     perspective: 500px;
   }
 }
+
+
+// Large screens
+@media screen and (max-width: 1200px) {
+  #contact {
+    .contact_data {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 3rem;
+    }
+  }
+}
+
+// Medium screens
+@media screen and (max-width: 992px) {}
+
+// Mobile screens
+@media screen and (max-width: 768px) {}
