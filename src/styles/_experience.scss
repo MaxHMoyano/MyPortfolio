@@ -1,0 +1,78 @@
+#experience {
+  h2 {
+    margin: 2rem 0;
+  }
+
+  .experience_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+
+    .experience {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem;
+      background: rgba($color: $dark, $alpha: .5);
+      border-radius: 1rem;
+      transition: all ease .3s;
+      height: 12rem;
+
+      .company {
+        flex: 1;
+        transition: all ease .3;
+
+        .name {
+          font-size: 2rem;
+        }
+
+        .position {
+          color: $primary;
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
+
+      .date {
+        height: 0;
+        transition: all ease .3s;
+        opacity: 0;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+
+      &:hover {
+        height: 17rem;
+
+        .date {
+          height: 5rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Large screens
+@media screen and (max-width: 1200px) {
+  #experience {
+    .experience_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Medium screens
+@media screen and (max-width: 992px) {
+  #experience {
+    .experience_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+// Mobile screens
+@media screen and (max-width: 768px) {}

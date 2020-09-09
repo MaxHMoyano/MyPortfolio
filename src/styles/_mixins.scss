@@ -1,0 +1,10 @@
+@mixin centeredContentFlex($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin navbarPadding {
+  padding: 1.5rem 2.5rem;
+}

@@ -1,18 +1,13 @@
 // Font import
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
 
-:root {
-  --animate-duration: 1000ms;
-  // --animate-delay: 5s;
-}
-
-// Colors
-$primary: #fec576;
-$light: #cfcfcf;
-$white: #fff;
-$dark: #0f0f0f;
-$black: #000;
-$grey: #1e1e1e;
+// Base
+@import './variables';
+@import './mixins';
 
 * {
   box-sizing: border-box;
@@ -22,6 +17,8 @@ $grey: #1e1e1e;
 
 html {
   font-size: 62.5%;
+  font-family: 'Kufam',
+    cursive;
 }
 
 h2 {
@@ -38,5 +35,6 @@ h2 {
 @import './home';
 @import './skills';
 @import './work';
+@import './experience';
 @import './contact';
 @import './components';

@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Portfolio | MMoyano</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/styles.css" />
   <link rel="shortcut icon" type="image/png" href="./src/assets/icon/custom – 2.ico" />
 
   <!-- Open Graph Protocol -->
-  <meta property="og:image" content="./src/assets/img/thumbnail.png" />
+  <!-- <meta property="og:image" content="./src/assets/img/thumbnail.png" /> -->
   <meta property="og:title" content="Max Moyano - A fullstack javascript developer" />
   <meta property="og:url" content="https://maxhmoyano.github.io/portfolio/" />
 </head>
@@ -19,7 +19,7 @@
 <body>
   <nav class="navbar" id="main-navbar">
     <div class="logo">
-      <div onclick="goToHome()" class="name animate__animated animate__backInLeft">
+      <div onclick="goToHome()" class="name" data-aos="fade-right">
         <h5>
           <strong class="text-primary">M</strong>aximiliano
         </h5>
@@ -49,12 +49,12 @@
           <span>Work</span>
         </a>
       </li>
-      <!-- <li id="experience_btn">
+      <li id="experience_btn">
         <a>
           <i class="fas fa-chalkboard-teacher"></i>
           <span>Experience</span>
         </a>
-      </li> -->
+      </li>
       <li id="contact_btn">
         <a>
           <i class="fas fa-address-book"></i>
@@ -83,23 +83,21 @@
   <main class="content">
     <section id="home">
       <div class="profile">
-        <h3 class="animate__animated animate__bounceInLeft">Hello! I'm</h3>
-        <h1 class="animate__animated animate__bounceInDown">
+        <h3 data-aos="fade-right">Hello! I'm</h3>
+        <h1 data-aos="fade-right">
           Maximiliano Moyano
         </h1>
-        <p class="animate__animated animate__bounceInDown">
+        <p data-aos="fade-left">
           I'm a full stack Javascript developer with 3+ years of experience so
           far, I'm specialized on ReactJs development and I'd love to work
           with you!
         </p>
-        <div class="links animate__animated animate__bounceInUp">
+        <div class="links" data-aos="fade-up">
           <a href="./src/assets/documents/Resume.pdf" class="download_cv" target="_blank">
             Download CV
           </a>
         </div>
       </div>
-      <!-- <div class="myself">
-        </div> -->
     </section>
     <section id="skills">
       <h2>My skills</h2>
@@ -394,9 +392,63 @@
         </div>
       </div>
     </section>
-    <!-- <section id="experience">
-
-    </section> -->
+    <section id="experience">
+      <h2>My experience</h2>
+      <div class="experience_container">
+        <div class="experience">
+          <div class="company">
+            <h3 class="name">
+              Qplus Software Solutions
+            </h3>
+            <span class="position">
+              Front-End Developer
+            </span>
+          </div>
+          <div class="date">
+            <span>September 2017 - November 2019</span>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="company">
+            <h3 class="name">
+              CorbisStudios
+            </h3>
+            <span class="position">
+              Leader Ssr Front-End Developer
+            </span>
+          </div>
+          <div class="date">
+            <span>November 20179 - June 2020</span>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="company">
+            <h3 class="name">
+              Esolutions
+            </h3>
+            <span class="position">
+              Leader Ssr Front-End Developer
+            </span>
+          </div>
+          <div class="date">
+            <span>June 2020 - September 2020</span>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="company">
+            <h3 class="name">
+              Globant
+            </h3>
+            <span class="position">
+              Ssr Advanced Front-End Developer
+            </span>
+          </div>
+          <div class="date">
+            <span>September 2020 - Current</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="contact">
       <h2>Wanna talk?</h2>
       <div class="contact_data">
@@ -435,6 +487,7 @@
   </main>
 
   <script src="https://kit.fontawesome.com/f882bdf9ee.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./src/scripts/index.js"></script>
 </body>
 

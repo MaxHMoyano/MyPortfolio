@@ -1,7 +1,7 @@
 #contact {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: column nowrap;
 
   .contact_data {
@@ -10,11 +10,8 @@
     column-gap: 3rem;
 
     .info_block {
+      @include centeredContentFlex(column);
       padding: 3rem;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
 
       i {
         color: $primary;
@@ -51,8 +48,7 @@
   }
 
   .options {
-    display: flex;
-    justify-content: center;
+    @include centeredContentFlex(row);
     perspective: 500px;
   }
 }

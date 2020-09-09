@@ -5,15 +5,13 @@
   align-items: stretch;
 
   button.direction {
+    @include centeredContentFlex(row);
     position: absolute;
     cursor: pointer;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
     padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     outline: none;
     border: none;
     color: $dark;
@@ -48,10 +46,8 @@
   }
 
   .work_container {
+    @include centeredContentFlex(row);
     flex: 1;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
     overflow: hidden;
     padding: 4rem;
 
@@ -78,8 +74,8 @@
         }
 
         .tech {
-          display: flex;
-          align-items: center;
+          @include centeredContentFlex(row);
+          justify-content: flex-start;
 
           i {
             flex: 0 0 10%;
@@ -95,11 +91,9 @@
       }
 
       .image {
+        @include centeredContentFlex(row);
         flex: 1;
         padding: 0 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         img {
           width: 100%;

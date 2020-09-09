@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Initialize AOS
+  AOS.init();
+
   // Handler when the DOM is fully loaded
   let buttons = document.querySelectorAll(
-    '#home_btn, #work_btn, #skills_btn, #contact_btn',
+    '#home_btn, #work_btn, #skills_btn, #experience_btn, #contact_btn',
   );
   buttons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
