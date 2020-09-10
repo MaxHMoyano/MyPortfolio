@@ -1,7 +1,7 @@
-@mixin centeredContentFlex($direction) {
+@mixin centeredContentFlex($direction: row, $justifyContent: center, $alignItems: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
   flex-direction: $direction;
 }
 

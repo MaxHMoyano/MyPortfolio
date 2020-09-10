@@ -48,11 +48,10 @@
   }
 
   .options {
-    @include centeredContentFlex(row);
+    @include centeredContentFlex();
     perspective: 500px;
   }
 }
-
 
 // Large screens
 @media screen and (max-width: 1200px) {
@@ -65,7 +64,9 @@
 }
 
 // Medium screens
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
 // Mobile screens
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
