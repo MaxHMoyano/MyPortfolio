@@ -12,6 +12,7 @@ body {
 
   .navbar {
     @include centeredContentFlex(column);
+    @include navbarPadding();
     justify-content: space-between;
     grid-area: navbar;
     background: $dark;
@@ -24,8 +25,8 @@ body {
 
     .logo {
       @include centeredContentFlex();
-      @include navbarPadding();
       cursor: pointer;
+      margin: 2.5rem 0;
       flex: 0 0 auto;
       transition: all ease 0.3s;
       width: 100%;
@@ -69,7 +70,7 @@ body {
 
         a {
           @include centeredContentFlex();
-          @include navbarPadding();
+          padding: 1.5rem 0;
           width: 100%;
 
           span {
@@ -91,7 +92,6 @@ body {
 
     .icons {
       @include centeredContentFlex();
-      @include navbarPadding();
       width: 100%;
       flex: 0 0 auto;
       justify-content: space-between;
@@ -135,8 +135,7 @@ body {
 }
 
 // Medium screens
-@media screen and (max-width: 992px) {
-}
+@media screen and (max-width: 992px) {}
 
 // Mobile screens
 @media screen and (max-width: 768px) {

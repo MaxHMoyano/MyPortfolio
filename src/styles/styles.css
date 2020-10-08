@@ -51,6 +51,7 @@ body .navbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0rem 2.5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -81,8 +82,8 @@ body .navbar .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1.5rem 2.5rem;
   cursor: pointer;
+  margin: 2.5rem 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -165,7 +166,7 @@ body .navbar .menu li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 0;
   width: 100%;
 }
 
@@ -201,7 +202,6 @@ body .navbar .icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1.5rem 2.5rem;
   width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
