@@ -24,7 +24,7 @@ body {
     }
 
     .logo {
-      @include centeredContentFlex();
+      @include centeredContentFlex(row, flex-start);
       cursor: pointer;
       margin: 2.5rem 0;
       flex: 0 0 auto;
