@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Max Moyano Portfolio",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/styled-components": "^5.1.9",
+    "styled-components": "^5.3.0"
+  },
   "devDependencies": {
     "@types/node": "^15.0.2",
     "@types/react": "^17.0.5",
@@ -19,7 +22,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve --open --mode development"
+    "start": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
