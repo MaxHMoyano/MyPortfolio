@@ -4,17 +4,29 @@
   "description": "Max Moyano Portfolio",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open --mode development"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MaxHMoyano/MyPortolio.git"
   },
   "keywords": [
-    "Portfolio",
-    "Scss",
-    "Html5",
-    "Javascript"
+    "Portfolio"
   ],
   "author": "MaxHMoyano@gmail.com",
   "license": "MIT",
