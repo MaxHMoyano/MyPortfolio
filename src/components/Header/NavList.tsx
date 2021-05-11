@@ -7,15 +7,20 @@ const NavListWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-grow: 1;
+  margin: 2rem 0;
 `;
 
-const NavList = ({ navItems }: { navItems: INavItem[] }) => {
+interface INavList {
+  navItems: INavItem[];
+}
+
+const NavList: React.FC<INavList> = ({ navItems }) => {
   return (
     <NavListWrapper>
       {navItems.map((navItem, idx) => (
-        <NavItem key={idx} title={navItem.name} icon={navItem.icon} />
+        <NavItem key={idx} name={navItem.name} icon={navItem.icon} />
       ))}
     </NavListWrapper>
   );

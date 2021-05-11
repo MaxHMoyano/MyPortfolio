@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { INavItem } from '../../models/navigation';
 import NavList from './NavList';
 import SocialsList from './SocialsList';
-import Subtitle from './Subtitle';
-import Title from './Title';
+import Subtitle from '../shared/Subtitle';
+import Title from '../shared/Title';
 
 const HeaderWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.dark};
@@ -20,10 +20,9 @@ const HeaderWrapper = styled.div`
 const LogoWrapper = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   padding-bottom: 2rem;
-  margin-bottom: 1.5rem;
 `;
 
-const Header = () => {
+const Header: React.FC = () => {
   const [navItems, setNavItems] = useState<INavItem[]>([
     { name: 'About Me', icon: 'user' },
     { name: 'Skills', icon: 'user' },
@@ -35,7 +34,8 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <LogoWrapper>
-        <Title>Maximiliano Moyano</Title>
+        <Title content={'Maximiliano'} />
+        <Title content={'Moyano'} />
         <Subtitle>FullStack Developer</Subtitle>
       </LogoWrapper>
       <NavList navItems={navItems} />
