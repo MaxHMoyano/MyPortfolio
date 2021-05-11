@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Header from './components/Header';
 
 const GlobalStyle = createGlobalStyle`
@@ -13,16 +13,31 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   body {
-    background-color: #ccc;
+    background-color: #e5e5e5;
     color: #000;
+  }
+  button {
+    font-family: inherit;
   }
 `;
 
 const app = () => {
+  const theme = {
+    colors: {
+      primary: '#fca311',
+      secondary: '#14213d',
+      light: '#e5e5e5',
+      white: '#ffffff',
+      dark: '#000000',
+    },
+  };
+
   return (
     <Fragment>
-      <GlobalStyle />
-      <Header />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header />
+      </ThemeProvider>
     </Fragment>
   );
 };
