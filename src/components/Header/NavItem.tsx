@@ -13,23 +13,23 @@ const NavItemButton = styled.button`
   padding: 1.75rem 0;
   width: 100%;
   cursor: pointer;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.white || 'white'};
   transition: all ease 0.3s;
   font-weight: bold;
   text-align: left;
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary || 'yellow'};
     opacity: 0.9;
     transform: translateX(0.5rem);
   }
 `;
 
-const NavItem: React.FC<INavItem> = ({ name, icon }) => {
+const NavItem: React.FC<INavItem> = (props) => {
   return (
     <Fragment>
       <NavItemButton>
         <NavItemIcon />
-        <NavItemName>{name}</NavItemName>
+        <NavItemName>{props.name}</NavItemName>
       </NavItemButton>
     </Fragment>
   );
