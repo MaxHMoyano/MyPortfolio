@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { getFontSizeByMeasure } from '../../util';
 
-const Subtitle = styled.h3`
-  font-size: 2rem;
+interface ISubtitle {
+  measure?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
+}
+
+const Subtitle = styled.h3<ISubtitle>`
+  font-size: ${(props) => getFontSizeByMeasure(props.measure)};
   opacity: 0.8;
 `;
 

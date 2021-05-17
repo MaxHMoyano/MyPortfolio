@@ -6,24 +6,23 @@ import SocialsList from './SocialsList';
 import Subtitle from '../shared/Subtitle';
 import Title from '../shared/Title';
 
-const HeaderWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.dark};
-  width: 15vw;
-  height: 100vh;
-  padding: 2.5rem;
+const NavbarWrapper = styled.div`
+  background-color: transparent;
+  padding: 2.5rem 5rem;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.white};
+  width: 100%;
 `;
 
 const LogoWrapper = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   padding-bottom: 2rem;
+  flex: 0 0 20%;
 `;
 
-const Header: React.FC = () => {
-  const [navItems, setNavItems] = useState<INavItem[]>([
+const index: React.FC = () => {
+  const [navItems] = useState<INavItem[]>([
     { name: 'About Me', icon: 'user' },
     { name: 'Skills', icon: 'user' },
     { name: 'Work', icon: 'user' },
@@ -32,16 +31,16 @@ const Header: React.FC = () => {
   ]);
 
   return (
-    <HeaderWrapper>
+    <NavbarWrapper>
       <LogoWrapper>
-        <Title content={'Maximiliano'} />
-        <Title content={'Moyano'} />
-        <Subtitle>FullStack Developer</Subtitle>
+        <Title measure={'m'} content={'Maximiliano'} />
+        <Title measure={'m'} content={'Moyano'} />
+        <Subtitle measure={'s'}>FullStack Developer</Subtitle>
       </LogoWrapper>
       <NavList navItems={navItems} />
       <SocialsList />
-    </HeaderWrapper>
+    </NavbarWrapper>
   );
 };
 
-export default Header;
+export default index;

@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 const NavListWrapper = styled.div`
   display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
   margin: 2rem 0;
 `;

@@ -7,7 +7,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     compress: true,
-    port: 9000,
   },
   module: {
     rules: [
@@ -16,10 +15,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.tsx?$/,
-        loader: 'babel-loader',
-      },
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: 'babel-loader',
+      // },
     ],
   },
   resolve: {

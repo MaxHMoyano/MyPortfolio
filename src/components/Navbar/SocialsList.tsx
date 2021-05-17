@@ -1,20 +1,18 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const SocialListWrapper = styled.div`
-  flex-shrink: 0;
+  flex: 0 0 20%;
   height: 10vh;
-  padding: 3rem 0 0 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  border-top: 1px solid ${(props) => props.theme.colors.primary};
 `;
 
 const SocialsList = () => {
-  const [icons, setIcons] = useState([faGithub, faLinkedin]);
+  const [icons] = useState([faGithub, faLinkedinIn]);
   return (
     <SocialListWrapper>
       {icons.map((icon, idx) => (

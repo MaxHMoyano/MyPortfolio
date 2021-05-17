@@ -11,8 +11,8 @@ export default createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   body {
-    background-color: #e5e5e5;
-    color: #111;
+    background-color: ${(props) => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.light};
   }
   button {
     font-family: inherit;
