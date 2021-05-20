@@ -8,7 +8,7 @@ import Title from '../shared/Title';
 
 const NavbarWrapper = styled.div`
   background-color: transparent;
-  padding: 2.5rem 5rem;
+  padding: 2.5rem 10rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -20,14 +20,13 @@ const LogoWrapper = styled.div`
   padding-bottom: 2rem;
   flex: 0 0 20%;
 `;
-
 const index: React.FC = () => {
   const [navItems] = useState<INavItem[]>([
-    { name: 'About Me', icon: 'user' },
-    { name: 'Skills', icon: 'user' },
-    { name: 'Work', icon: 'user' },
-    { name: 'Experience', icon: 'user' },
-    { name: 'Contact', icon: 'user' },
+    { name: 'About Me', icon: 'user', url: '/' },
+    { name: 'Skills', icon: 'user', url: 'skills' },
+    { name: 'Work', icon: 'user', url: 'work' },
+    { name: 'Experience', icon: 'user', url: 'experience' },
+    { name: 'Contact', icon: 'user', url: 'contact' },
   ]);
 
   return (

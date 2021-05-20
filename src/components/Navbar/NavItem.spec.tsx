@@ -12,6 +12,7 @@ describe('NavItem Test Suite', () => {
   const defaultProps: INavItem = {
     name: 'name of item',
     icon: 'icon',
+    url: 'url',
   };
   beforeEach(() => {
     component = render(

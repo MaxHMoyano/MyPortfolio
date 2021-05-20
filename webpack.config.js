@@ -7,6 +7,8 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     compress: true,
+    publicPath: '/',
+    historyApiFallback: true,
   },
   module: {
     rules: [

@@ -13,8 +13,27 @@ export default createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.colors.black};
     color: ${(props) => props.theme.colors.light};
+
   }
   button {
     font-family: inherit;
   }
+  .fade-enter{
+    opacity: 0;
+  }
+  .fade-exit{
+    opacity: 1;
+  }
+  .fade-enter-active{
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  .fade-exit-active{
+    opacity: 0;
+  }
+  .fade-enter-active,
+  .fade-exit-active{
+    transition: opacity 1s;
+  }
+
 `;

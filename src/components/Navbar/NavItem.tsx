@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { INavItem } from '../../models/navigation';
 
 const NavItemIcon = styled.i``;
 const NavItemName = styled.span``;
 
-const NavItemButton = styled.button`
+const NavLinkStyled = styled(NavLink)`
   outline: none;
   border: none;
   background-color: transparent;
@@ -16,6 +17,7 @@ const NavItemButton = styled.button`
   transition: all ease 0.3s;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
   &::after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -28,7 +30,8 @@ const NavItemButton = styled.button`
     width: 0;
     transition: all ease 0.3s;
   }
-  &:hover {
+  &:hover,
+  &.active {
     color: ${(props) => props.theme.colors.primary || 'yellow'};
     opacity: 0.9;
     transform: translateY(0.25rem);
@@ -41,12 +44,10 @@ const NavItemButton = styled.button`
 
 const NavItem: React.FC<INavItem> = (props) => {
   return (
-    <Fragment>
-      <NavItemButton>
-        <NavItemIcon />
-        <NavItemName>{props.name}</NavItemName>
-      </NavItemButton>
-    </Fragment>
+    <NavLinkStyled exact to={props.url}>
+      <NavItemIcon />
+      <NavItemName>{props.name}</NavItemName>
+    </NavLinkStyled>
   );
 };
 

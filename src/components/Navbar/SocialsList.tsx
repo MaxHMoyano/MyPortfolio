@@ -11,12 +11,25 @@ const SocialListWrapper = styled.div`
   align-items: center;
 `;
 
-const SocialsList = () => {
+const SocialItem = styled(FontAwesomeIcon)`
+  transition: all ease 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(0.25rem);
+    color: ${(props) => props.theme.colors.primary};
+  }
+`;
+
+const SocialsList: React.FC = () => {
+  const iconStyle: React.CSSProperties = {
+    marginRight: '3rem',
+  };
+
   const [icons] = useState([faGithub, faLinkedinIn]);
   return (
     <SocialListWrapper>
       {icons.map((icon, idx) => (
-        <FontAwesomeIcon style={{ marginRight: '3rem' }} size={'3x'} key={idx} icon={icon} />
+        <SocialItem style={iconStyle} size={'3x'} key={idx} icon={icon} />
       ))}
     </SocialListWrapper>
   );

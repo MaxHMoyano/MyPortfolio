@@ -20,7 +20,7 @@ const NavList: React.FC<INavList> = ({ navItems }) => {
   return (
     <NavListWrapper>
       {navItems.map((navItem, idx) => (
-        <NavItem key={idx} name={navItem.name} icon={navItem.icon} />
+        <NavItem key={idx} {...navItem} />
       ))}
     </NavListWrapper>
   );
