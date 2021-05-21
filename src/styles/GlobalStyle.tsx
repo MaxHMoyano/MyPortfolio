@@ -13,7 +13,7 @@ export default createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.colors.black};
     color: ${(props) => props.theme.colors.light};
-
+    overflow: hidden;
   }
   button {
     font-family: inherit;
@@ -22,18 +22,11 @@ export default createGlobalStyle`
     opacity: 0;
   }
   .fade-exit{
-    opacity: 1;
+    opacity: 0;
   }
   .fade-enter-active{
     opacity: 1;
-    transition: opacity 1s ease-in;
-  }
-  .fade-exit-active{
-    opacity: 0;
-  }
-  .fade-enter-active,
-  .fade-exit-active{
-    transition: opacity 1s;
+    transition: opacity .3s ease-in;
   }
 
 `;

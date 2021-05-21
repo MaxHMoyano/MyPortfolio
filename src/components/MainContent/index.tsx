@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import Subtitle from '../shared/Subtitle';
-import Title from '../shared/Title';
-import Experience from '../Experience';
+import { About, Skills, Work, Experience, Contact } from '../../routes/';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const MainContentWrapper = styled.div`
-  padding: 4rem 10rem;
+  padding: 0rem 10rem 4rem 10rem;
+`;
+
+const TransitionGroupStyled = styled(TransitionGroup)`
+  height: 100%;
+  > * {
+    height: inherit;
+  }
 `;
 
 const index: React.FC = () => {
@@ -15,24 +20,27 @@ const index: React.FC = () => {
 
   return (
     <MainContentWrapper>
-      <TransitionGroup>
+      <TransitionGroupStyled>
         <CSSTransition timeout={300} classNames={'fade'} key={location.key}>
           <Switch location={location}>
             <Route path={'/'} exact>
-              <div>
-                <Subtitle measure={'l'}>Hello! I'm</Subtitle>
-                <Title measure={'xl'} content={'Maximiliano Moyano'} />
-              </div>
+              <About />
             </Route>
-            <Route path={'/skills'}></Route>
-            <Route path={'/work'}></Route>
+            <Route path={'/skills'}>
+              <Skills />
+            </Route>
+            <Route path={'/work'}>
+              <Work />
+            </Route>
             <Route path={'/experience'}>
               <Experience />
             </Route>
-            <Route path={'/contact'}></Route>
+            <Route path={'/contact'}>
+              <Contact />
+            </Route>
           </Switch>
         </CSSTransition>
-      </TransitionGroup>
+      </TransitionGroupStyled>
     </MainContentWrapper>
   );
 };

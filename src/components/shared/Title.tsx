@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { getFontSizeByMeasure } from '../../util';
 interface ITitle {
@@ -10,21 +10,27 @@ const TitleContent = styled.h1<ITitle>`
   font-size: ${(props) => getFontSizeByMeasure(props.measure)};
 `;
 
-const FirstLetter = styled.strong`
+const Strong = styled.strong`
   color: ${(props) => props.theme.colors.primary};
 `;
 
-const Title: React.FC<ITitle> = ({ children, content, measure }) => {
-  const [firstLetter] = useState<string>(content.charAt(0));
-  const [restOfContent] = useState<string>(content.substring(1));
+const Title: React.FC<ITitle> = ({ content, measure }) => {
+  const [formmatedContent, setFormmatedContent] = useState<JSX.Element[]>(null);
+
+  useEffect(() => {
+    let jsx = content.split(' ').map((word, idx) => (
+      <React.Fragment key={idx}>
+        <Strong>{word.charAt(0)}</Strong>
+        <span>{word.substring(1)}&nbsp;</span>
+      </React.Fragment>
+    ));
+    setFormmatedContent(jsx);
+  }, []);
 
   return (
-    <Fragment>
-      <TitleContent content={content} measure={measure}>
-        <FirstLetter>{firstLetter}</FirstLetter>
-        {restOfContent}
-      </TitleContent>
-    </Fragment>
+    <TitleContent content={content} measure={measure}>
+      {formmatedContent}
+    </TitleContent>
   );
 };
 

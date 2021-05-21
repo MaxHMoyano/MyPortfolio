@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import { IExperience } from '../../models';
 const ExperienceTime = styled.h3`
   opacity: 0;
   transition: all ease 0.3s;
@@ -45,57 +45,16 @@ const Experience = styled.div`
   height: 180px;
   margin-bottom: 3rem;
 `;
-const ExperiencesWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-`;
 
-const index = () => {
-  const [experiences] = useState([
-    {
-      name: 'QPLUS SOFTWARE SOLUTIONS',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus. Etiam malesuada ligula tellus, at dignissim dui malesuada a. Nunc in felis quis ante convallis laoreet. Nullam scelerisque quam purus, ac ornare justo malesuada vel. Vestibulum quis eleifend leo. Nunc mollis. ',
-      time: '2 years',
-    },
-    {
-      name: 'Corbis Studios',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus. Etiam malesuada ligula tellus, at dignissim dui malesuada a. Nunc in felis quis ante convallis laoreet. Nullam scelerisque quam purus, ac ornare justo malesuada vel. Vestibulum quis eleifend leo. Nunc mollis. ',
-      time: '6 months',
-    },
-    {
-      name: 'ESolutions',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus. Etiam malesuada ligula tellus, at dignissim dui malesuada a. Nunc in felis quis ante convallis laoreet. Nullam scelerisque quam purus, ac ornare justo malesuada vel. Vestibulum quis eleifend leo. Nunc mollis. ',
-      time: '5 months',
-    },
-    {
-      name: 'Globant',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus. Etiam malesuada ligula tellus, at dignissim dui malesuada a. Nunc in felis quis ante convallis laoreet. Nullam scelerisque quam purus, ac ornare justo malesuada vel. Vestibulum quis eleifend leo. Nunc mollis. ',
-      time: '6 months',
-    },
-    {
-      name: 'Intive S.A',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus. Etiam malesuada ligula tellus, at dignissim dui malesuada a. Nunc in felis quis ante convallis laoreet. Nullam scelerisque quam purus, ac ornare justo malesuada vel. Vestibulum quis eleifend leo. Nunc mollis. ',
-      time: '7 months',
-    },
-  ]);
+const index: React.FC<IExperience> = ({ name, description, time }) => {
   return (
-    <ExperiencesWrapper>
-      {experiences.map((experience, idx) => (
-        <Experience key={idx}>
-          <ExperienceContainer>
-            <ExperienceName>{experience.name}</ExperienceName>
-            <ExperienceDescription>{experience.description}</ExperienceDescription>
-            <ExperienceTime>{experience.time}</ExperienceTime>
-          </ExperienceContainer>
-        </Experience>
-      ))}
-    </ExperiencesWrapper>
+    <Experience>
+      <ExperienceContainer>
+        <ExperienceName>{name}</ExperienceName>
+        <ExperienceDescription>{description}</ExperienceDescription>
+        <ExperienceTime>{time}</ExperienceTime>
+      </ExperienceContainer>
+    </Experience>
   );
 };
 
