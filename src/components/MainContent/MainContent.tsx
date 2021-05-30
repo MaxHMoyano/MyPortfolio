@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import { About, Skills, Work, Experience, Contact } from '../../routes/';
+import { About, Skills, Work, Experience, Contact } from '../../routes';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-const MainContentWrapper = styled.div`
+const Wrapper = styled.div`
   padding: 0rem 10rem 4rem 10rem;
 `;
 
@@ -15,11 +15,11 @@ const TransitionGroupStyled = styled(TransitionGroup)`
   }
 `;
 
-const index: React.FC = () => {
+const MainContent: React.FC = () => {
   const location = useLocation();
 
   return (
-    <MainContentWrapper>
+    <Wrapper>
       <TransitionGroupStyled>
         <CSSTransition timeout={300} classNames={'fade'} key={location.key}>
           <Switch location={location}>
@@ -41,8 +41,8 @@ const index: React.FC = () => {
           </Switch>
         </CSSTransition>
       </TransitionGroupStyled>
-    </MainContentWrapper>
+    </Wrapper>
   );
 };
 
-export default index;
+export default MainContent;

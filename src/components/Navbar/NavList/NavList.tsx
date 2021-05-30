@@ -1,9 +1,9 @@
 import React from 'react';
-import NavItem from './NavItem';
-import { INavItem } from '../../models/navigation';
+import NavItem from '../NavItem/NavItem';
+import { INavItem } from '../../../models/navigation';
 import styled from 'styled-components';
 
-const NavListWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -13,16 +13,16 @@ const NavListWrapper = styled.div`
 `;
 
 interface INavList {
-  navItems: INavItem[];
+  items: INavItem[];
 }
 
-const NavList: React.FC<INavList> = ({ navItems }) => {
+const NavList: React.FC<INavList> = ({ items }) => {
   return (
-    <NavListWrapper>
-      {navItems.map((navItem, idx) => (
+    <Wrapper>
+      {items.map((navItem, idx) => (
         <NavItem key={idx} {...navItem} />
       ))}
-    </NavListWrapper>
+    </Wrapper>
   );
 };
 

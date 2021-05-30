@@ -2,9 +2,9 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, RenderResult } from '@testing-library/react';
 import NavItem from './NavItem';
-import { INavItem } from '../../models/navigation';
+import { INavItem } from '../../../models/navigation';
 import { ThemeProvider } from 'styled-components';
-import theme from '../../styles/theme';
+import theme from '../../../styles/theme';
 import 'jest-styled-components';
 
 describe('NavItem Test Suite', () => {

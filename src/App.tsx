@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import Navbar from './components/Navbar';
-import Content from './components/MainContent';
+import Content from './components/MainContent/MainContent';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 import { BrowserRouter } from 'react-router-dom';

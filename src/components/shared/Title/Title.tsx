@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { getFontSizeByMeasure } from '../../util';
+import { getFontSizeByMeasure } from '../../../util';
 interface ITitle {
   content: string;
   measure?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';

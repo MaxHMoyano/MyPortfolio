@@ -8,6 +8,10 @@
     "allowJs": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "Models/*": ["./src/models/*"],
+      "Components/*": ["./src/components/*"]
+    }
   }
 }

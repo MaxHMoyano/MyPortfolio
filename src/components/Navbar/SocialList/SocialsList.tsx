@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const SocialListWrapper = styled.div`
+const Wrapper = styled.div`
   flex: 0 0 20%;
   height: 10vh;
   display: flex;
@@ -27,11 +27,11 @@ const SocialsList: React.FC = () => {
 
   const [icons] = useState([faGithub, faLinkedinIn]);
   return (
-    <SocialListWrapper>
+    <Wrapper>
       {icons.map((icon, idx) => (
         <SocialItem style={iconStyle} size={'3x'} key={idx} icon={icon} />
       ))}
-    </SocialListWrapper>
+    </Wrapper>
   );
 };
 

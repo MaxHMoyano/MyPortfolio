@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IExperience } from '../../models';
-const ExperienceTime = styled.h3`
+const Time = styled.h3`
   opacity: 0;
   transition: all ease 0.3s;
   font-size: 1.5rem;
@@ -11,15 +11,16 @@ const ExperienceTime = styled.h3`
   justify-content: center;
 `;
 
-const ExperienceDescription = styled.p`
-  font-weight: bold;
+const Description = styled.p`
   text-align: center;
+  font-size: 1.25rem;
 `;
-const ExperienceName = styled.h2`
+const Name = styled.h2`
   font-size: 2rem;
+  color: ${(props) => props.theme.colors.primary};
 `;
 
-const ExperienceContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +33,7 @@ const ExperienceContainer = styled.div`
   cursor: pointer;
   &:hover {
     height: 180px;
-    > ${ExperienceTime} {
+    > ${Time} {
       opacity: 1;
       margin-top: 1.5rem;
       padding-top: 1.5rem;
@@ -40,22 +41,22 @@ const ExperienceContainer = styled.div`
   }
 `;
 
-const Experience = styled.div`
+const Wrapper = styled.div`
   flex: 0 0 30%;
   height: 180px;
   margin-bottom: 3rem;
 `;
 
-const index: React.FC<IExperience> = ({ name, description, time }) => {
+const Experience: React.FC<IExperience> = ({ name, description, time }) => {
   return (
-    <Experience>
-      <ExperienceContainer>
-        <ExperienceName>{name}</ExperienceName>
-        <ExperienceDescription>{description}</ExperienceDescription>
-        <ExperienceTime>{time}</ExperienceTime>
-      </ExperienceContainer>
-    </Experience>
+    <Wrapper>
+      <Container>
+        <Name>{name}</Name>
+        <Description>{description}</Description>
+        <Time>{time}</Time>
+      </Container>
+    </Wrapper>
   );
 };
 
-export default index;
+export default Experience;

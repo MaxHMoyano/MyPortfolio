@@ -24,7 +24,11 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.json'],
+    alias: {
+      Models: path.resolve(__dirname, 'src/models/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+    },
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

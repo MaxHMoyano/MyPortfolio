@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getFontSizeByMeasure } from '../../util';
+import { getFontSizeByMeasure } from '../../../util';
 
 interface ISubtitle {
   measure?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';

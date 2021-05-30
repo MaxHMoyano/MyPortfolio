@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Subtitle from '../../components/shared/Subtitle';
-import Title from '../../components/shared/Title';
+import Subtitle from '../../components/shared/Subtitle/Subtitle';
+import Title from '../../components/shared/Title/Title';
 
-const AboutWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -14,7 +14,7 @@ const Information = styled.div`
 
 const About: React.FC = () => {
   return (
-    <AboutWrapper>
+    <Wrapper>
       <Information>
         <Subtitle measure={'xl'}>Hello! I'm</Subtitle>
         <Title measure={'xxl'} content={'Maximiliano Moyano'} />
@@ -23,7 +23,7 @@ const About: React.FC = () => {
           in Front-End development, mostly with ReactJs and Angular 2+
         </p>
       </Information>
-    </AboutWrapper>
+    </Wrapper>
   );
 };
 

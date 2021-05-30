@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IExperience } from '../../models';
-import Experience from '../../components/Experience';
-const ExperiencesWrapper = styled.div`
+import Experience from '../../components/Experience/Experience';
+const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
@@ -45,11 +45,11 @@ const ExperiencePage: React.FC = () => {
   ]);
 
   return (
-    <ExperiencesWrapper>
+    <Wrapper>
       {experiences.map((experience, idx) => (
         <Experience key={idx} {...experience} />
       ))}
-    </ExperiencesWrapper>
+    </Wrapper>
   );
 };
 

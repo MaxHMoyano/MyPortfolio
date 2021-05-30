@@ -1,7 +1,7 @@
-import About from './about';
-import Skills from './skills';
-import Work from './work';
-import Experience from './experience';
-import Contact from './contact';
+import About from './about/About';
+import Skills from './skills/Skills';
+import Work from './work/Work';
+import Experience from './experience/Experience';
+import Contact from './contact/Contact';
 
 export { About, Skills, Work, Experience, Contact };
