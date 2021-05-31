@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { INavItem } from '../../models/navigation';
-import NavList from './NavList/NavList';
-import SocialsList from './SocialList/SocialsList';
-import Subtitle from '../shared/Subtitle/Subtitle';
-import Title from '../shared/Title/Title';
+import { INavItem } from 'Models/navigation';
+import NavList from 'Components/Navbar/NavList/NavList';
+import SocialsList from 'Components/Navbar/SocialList/SocialsList';
+import Subtitle from 'Components/shared/Subtitle/Subtitle';
+import Title from 'Components/shared/Title/Title';
 
 const Wrapper = styled.div`
   background-color: transparent;

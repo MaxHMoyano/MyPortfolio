@@ -1,6 +1,6 @@
 import React from 'react';
-import NavItem from '../NavItem/NavItem';
-import { INavItem } from '../../../models/navigation';
+import NavItem from 'Components/Navbar/NavItem/NavItem';
+import { INavItem } from 'Models/navigation';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

@@ -11,7 +11,10 @@
     "esModuleInterop": true,
     "paths": {
       "Models/*": ["./src/models/*"],
-      "Components/*": ["./src/components/*"]
+      "Components/*": ["./src/components/*"],
+      "Routes/*": ["./src/routes/*"],
+      "Theme/*": ["./src/theme/*"],
+      "Utils/*": ["./src/utils/*"]
     }
   }
 }

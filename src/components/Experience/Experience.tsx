@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IExperience } from '../../models';
+import { IExperience } from 'Models/experience';
 const Time = styled.h3`
   opacity: 0;
   transition: all ease 0.3s;
@@ -31,8 +31,12 @@ const Container = styled.div`
   border-radius: 2rem;
   transition: all ease 0.3s;
   cursor: pointer;
+  opacity: 0.8;
   &:hover {
     height: 180px;
+    transform: translateY(0.5rem);
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
     > ${Time} {
       opacity: 1;
       margin-top: 1.5rem;

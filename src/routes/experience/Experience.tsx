@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IExperience } from '../../models';
-import Experience from '../../components/Experience/Experience';
+import { IExperience } from 'Models/experience';
+import Experience from 'Components/Experience/Experience';
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

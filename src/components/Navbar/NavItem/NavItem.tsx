@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { INavItem } from '../../../models/navigation';
+import { INavItem } from 'Models/navigation';
 
 const NavItemIcon = styled.i``;
 const NavItemName = styled.span``;

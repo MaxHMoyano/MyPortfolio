@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import { About, Skills, Work, Experience, Contact } from '../../routes';
+import { About, Skills, Work, Experience, Contact } from 'Routes/index';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Wrapper = styled.div`

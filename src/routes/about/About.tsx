@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Subtitle from '../../components/shared/Subtitle/Subtitle';
-import Title from '../../components/shared/Title/Title';
+import Subtitle from 'Components/shared/Subtitle/Subtitle';
+import Title from 'Components/shared/Title/Title';
 
 const Wrapper = styled.div`
   display: flex;

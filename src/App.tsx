@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import Navbar from './components/Navbar';
-import Content from './components/MainContent/MainContent';
-import GlobalStyle from './styles/GlobalStyle';
-import theme from './styles/theme';
+import Navbar from 'Components/Navbar';
+import Content from 'Components/MainContent/MainContent';
+import GlobalStyle from './theme/GlobalStyle';
+import theme from './theme/theme';
 import { BrowserRouter } from 'react-router-dom';
 
 const AppWrapper = styled.div`
