@@ -5,10 +5,11 @@ const Time = styled.h3`
   opacity: 0;
   transition: all ease 0.3s;
   font-size: 1.5rem;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid ${(props) => props.theme.colors.secondary};
   width: 100%;
   display: flex;
   justify-content: center;
+  color: ${(props) => props.theme.colors.light};
 `;
 
 const Description = styled.p`
