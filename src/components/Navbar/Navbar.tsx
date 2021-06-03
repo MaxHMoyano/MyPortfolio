@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
   const [navItems] = useState<INavItem[]>([
     { name: 'About Me', icon: 'user', url: '/' },
     { name: 'Skills', icon: 'user', url: 'skills' },
-    { name: 'Work', icon: 'user', url: 'work' },
     { name: 'Experience', icon: 'user', url: 'experience' },
+    { name: 'Work', icon: 'user', url: 'work' },
     { name: 'Contact', icon: 'user', url: 'contact' },
   ]);
 

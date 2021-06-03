@@ -15,6 +15,7 @@ const growth = (percentage: number) => keyframes`
 const Bar = styled.div<ILoadingBar>`
   height: 0.25rem;
   background-color: ${(props) => (props.color ? props.color : props.theme.colors.primary)};
+  box-shadow: 0 0.5rem 1rem ${(props) => (props.color ? props.color : props.theme.colors.primary)};
   border-radius: 10px;
   width: ${(props) => props.percentage}%;
   animation: ${(props) => growth(props.percentage)} 1s forwards;
@@ -42,6 +43,7 @@ const Wrapper = styled.div`
     ${Bar} {
       height: 1rem;
       opacity: 1;
+      box-shadow: none;
     }
     ${Time} {
       opacity: 1;

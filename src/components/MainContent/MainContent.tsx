@@ -6,12 +6,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Wrapper = styled.div`
   padding: 0rem 10rem 4rem 10rem;
-`;
-
-const TransitionGroupStyled = styled(TransitionGroup)`
-  height: 100%;
   > * {
-    height: inherit;
+    height: 100%;
   }
 `;
 
@@ -20,27 +16,23 @@ const MainContent: React.FC = () => {
 
   return (
     <Wrapper>
-      <TransitionGroupStyled>
-        <CSSTransition timeout={300} classNames={'fade'} key={location.key}>
-          <Switch location={location}>
-            <Route path={'/'} exact>
-              <About />
-            </Route>
-            <Route path={'/skills'}>
-              <Skills />
-            </Route>
-            <Route path={'/work'}>
-              <Work />
-            </Route>
-            <Route path={'/experience'}>
-              <Experience />
-            </Route>
-            <Route path={'/contact'}>
-              <Contact />
-            </Route>
-          </Switch>
-        </CSSTransition>
-      </TransitionGroupStyled>
+      <Switch location={location}>
+        <Route path={'/'} exact>
+          <About />
+        </Route>
+        <Route path={'/skills'}>
+          <Skills />
+        </Route>
+        <Route path={'/work'}>
+          <Work />
+        </Route>
+        <Route path={'/experience'}>
+          <Experience />
+        </Route>
+        <Route path={'/contact'}>
+          <Contact />
+        </Route>
+      </Switch>
     </Wrapper>
   );
 };

@@ -1,64 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { IExperience } from 'Models/experience';
-const Time = styled.h3`
-  opacity: 0;
-  transition: all ease 0.3s;
-  font-size: 1.5rem;
-  border-top: 1px solid ${(props) => props.theme.colors.secondary};
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  color: ${(props) => props.theme.colors.light};
+
+const Name = styled.h2`
+  font-size: 2rem;
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const Description = styled.p`
   text-align: center;
   font-size: 1.25rem;
 `;
-const Name = styled.h2`
-  font-size: 2rem;
-  color: ${(props) => props.theme.colors.primary};
+
+const Time = styled.p`
+  opacity: 0.8;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 150px;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
   padding: 2rem;
-  border-radius: 2rem;
-  transition: all ease 0.3s;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 16px #0007;
   cursor: pointer;
+  transition: all ease 0.3s;
   opacity: 0.8;
   &:hover {
-    height: 180px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 1rem 1rem 16px #000f;
     transform: translateY(0.5rem);
-    background-color: rgba(255, 255, 255, 0.2);
     opacity: 1;
-    > ${Time} {
-      opacity: 1;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-    }
   }
 `;
 
 const Wrapper = styled.div`
-  flex: 0 0 30%;
-  height: 180px;
-  margin-bottom: 3rem;
+  height: 50vh;
 `;
 
-const Experience: React.FC<IExperience> = ({ name, description, time }) => {
+const Experience: React.FC<IExperience> = ({ name, description, from, to }) => {
   return (
     <Wrapper>
       <Container>
         <Name>{name}</Name>
+        <Time>
+          From {from} to {to}
+        </Time>
         <Description>{description}</Description>
-        <Time>{time}</Time>
       </Container>
     </Wrapper>
   );
