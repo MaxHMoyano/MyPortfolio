@@ -5,7 +5,7 @@ interface ISubtitle {
   measure?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 }
 
-const Subtitle = styled.h3<ISubtitle>`
+const Subtitle = styled.h2<ISubtitle>`
   font-size: ${(props) => getFontSizeByMeasure(props.measure)};
   opacity: 0.8;
 `;

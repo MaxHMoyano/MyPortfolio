@@ -41285,37 +41285,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var Utils_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils/index */ "./src/utils/index.ts");
 
 
-const growth = (percentage) => styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes `
-  from {
-    width: 0%;
-  }
 
-  to {
-    width: ${percentage}%;
-  }
-`;
-const Bar = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div `
+const Bar = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div `
   height: 0.25rem;
   background-color: ${(props) => (props.color ? props.color : props.theme.colors.primary)};
   border-radius: 10px;
   width: ${(props) => props.percentage}%;
-  animation: ${(props) => growth(props.percentage)} 1s forwards;
+  animation: ${(props) => (0,Utils_index__WEBPACK_IMPORTED_MODULE_1__.growth)(props.percentage)} 1s forwards;
   transition: all ease 0.3s;
   opacity: 0.9;
 `;
-const Name = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.span `
+const Name = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.span `
   font-size: 2rem;
 `;
-const Time = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.span `
+const Time = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.span `
   font-size: 1.5rem;
   opacity: 0;
   transition: all ease 0.3s;
 `;
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div ``;
-const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div `
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div ``;
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div `
   padding: 3.5rem 0;
   height: 100px;
   &:hover {
@@ -41359,7 +41352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Utils_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Utils/index */ "./src/utils/index.ts");
 
 
-const Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.h3 `
+const Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.h2 `
   font-size: ${(props) => (0,Utils_index__WEBPACK_IMPORTED_MODULE_0__.getFontSizeByMeasure)(props.measure)};
   opacity: 0.8;
 `;
@@ -41380,30 +41373,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _TimelineItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TimelineItem */ "./src/components/shared/Timeline/TimelineItem.tsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var Utils_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils/index */ "./src/utils/index.ts");
+/* harmony import */ var _TimelineItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TimelineItem */ "./src/components/shared/Timeline/TimelineItem.tsx");
 
 
 
-const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div `
-  background: red;
+
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__.default.div `
+  background: transparent;
   position: relative;
   display: flex;
   flex-flow: row wrap;
   height: 100%;
-  align-items: flex-start;
+  align-items: center;
+  perspective: 100px;
   &::after {
     z-index: 1;
     position: absolute;
     content: '';
-    width: 100%;
+    width: 0%;
     top: 50%;
     left: 0;
     border-top: 1px solid white;
+    animation: ${(props) => (0,Utils_index__WEBPACK_IMPORTED_MODULE_1__.growth)(100)} 2s forwards;
   }
 `;
 const Timeline = (props) => {
-    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null, props.items.map((item, idx) => (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TimelineItem__WEBPACK_IMPORTED_MODULE_1__.default, Object.assign({ key: idx }, item))))));
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null, props.items.map((item, idx) => (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TimelineItem__WEBPACK_IMPORTED_MODULE_2__.default, Object.assign({ key: idx }, item))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Timeline);
 
@@ -41425,22 +41422,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
-const Heading = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.h2 ``;
-const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.p ``;
+const Heading = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.h2 `
+  font-size: 1.75rem;
+  color: ${(props) => props.theme.colors.primary};
+`;
+const Time = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.span `
+  opacity: 0.9;
+`;
+const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.p `
+  font-size: 1.3rem;
+  margin-top: 2rem;
+`;
 const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div `
   background: ${(props) => props.theme.colors.dark};
   border-radius: 1rem;
   padding: 3rem;
   height: 250px;
-  width: 25%;
+  width: 15.6%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  opacity: 0.8;
+  transition: all ease 0.3s;
   &:last-child {
     margin-right: 0;
   }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: -50%;
+    left: 50%;
+    height: 50%;
+    border-left: 1px solid white;
+  }
+  &:nth-child(even) {
+    transform: translateY(100%);
+    &::after {
+      top: -50%;
+    }
+    &:hover {
+      transform: translate3d(0, 100%, 0.15rem);
+    }
+  }
+  &:nth-child(odd) {
+    transform: translateY(-100%);
+    &::after {
+      top: 100%;
+    }
+    &:hover {
+      transform: translate3d(0, -100%, 0.15rem);
+    }
+  }
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 `;
-const TimelineItem = (props) => {
+const TimelineItem = ({ name, from, to, description }) => {
     return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null,
-        react__WEBPACK_IMPORTED_MODULE_0__.createElement(Heading, null, props.name),
-        react__WEBPACK_IMPORTED_MODULE_0__.createElement(Description, null, props.description)));
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(Heading, null, name),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(Time, null,
+            from,
+            " - ",
+            to),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(Description, null, description)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TimelineItem);
 
@@ -41604,7 +41651,7 @@ const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div ``;
 const ExperienceRoute = () => {
     const experiences = [
         {
-            name: 'Qplus Software Solutions',
+            name: 'Qplus Software',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus.',
             from: 'July 2017',
             to: 'November 2019',
@@ -41626,6 +41673,18 @@ const ExperienceRoute = () => {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus.',
             from: 'December 2020',
             to: 'July 2021',
+        },
+        {
+            name: 'Intive SAU',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus.',
+            from: 'January 2021',
+            to: 'June 2021',
+        },
+        {
+            name: 'Solvd Inc.',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum odio ut enim scelerisque vulputate. Morbi ut congue purus.',
+            from: 'June 2021',
+            to: 'Present',
         },
     ];
     return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null,
@@ -41730,9 +41789,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
+
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div ``;
 const Work = () => {
-    return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Work);
 
@@ -41831,13 +41893,25 @@ const theme = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getFontSizeByMeasure": () => (/* binding */ getFontSizeByMeasure)
+/* harmony export */   "getFontSizeByMeasure": () => (/* binding */ getFontSizeByMeasure),
+/* harmony export */   "growth": () => (/* binding */ growth)
 /* harmony export */ });
 /* harmony import */ var Theme_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Theme/theme */ "./src/theme/theme.ts");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
 
 const getFontSizeByMeasure = (measure) => {
     return Theme_theme__WEBPACK_IMPORTED_MODULE_0__.default.measures[measure] || Theme_theme__WEBPACK_IMPORTED_MODULE_0__.default.measures.m;
 };
+const growth = (percentage) => styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes `
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: ${percentage}%;
+  }
+`;
 
 
 /***/ }),
