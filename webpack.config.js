@@ -4,11 +4,13 @@ const path = require('path');
 module.exports = {
   entry: './src/index.tsx',
   devtool: 'source-map',
+  mode: 'development',
   devServer: {
     contentBase: './dist',
     compress: true,
     publicPath: '/',
     historyApiFallback: true,
+    open: 'chrome',
   },
   module: {
     rules: [
