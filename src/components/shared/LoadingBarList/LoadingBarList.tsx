@@ -18,8 +18,6 @@ const Title = styled.h2`
 const Wrapper = styled.div`
   padding: 2rem;
   &:hover {
-    transition: all ease 0.3s;
-    background: rgba(0, 0, 0, 0.6);
     ${Title} {
       opacity: 1;
     }

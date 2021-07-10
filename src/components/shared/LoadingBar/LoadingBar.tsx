@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     ${Bar} {
       height: 1rem;
       opacity: 1;
-      box-shadow: none;
+      box-shadow: 2rem 1rem 2rem black;
     }
     ${Time} {
       opacity: 1;

@@ -10,9 +10,9 @@ const AppWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 15vh 1fr;
-  min-width: 100vw;
-  min-height: 100vh;
+  grid-template-rows: 15vh 85vh;
+  max-width: 100vw;
+  max-height: 100vh;
 `;
 
 const app = () => {

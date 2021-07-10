@@ -4,15 +4,28 @@ import styled from 'styled-components';
 import Card from 'Components/shared/Card/Card';
 import { ICard } from 'Models/card';
 import { faGithubAlt, faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
+
+const Title = styled.h2`
+  font-size: 5rem;
+  text-align: center;
+`;
+
+const List = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: stretch;
 `;
 
 const Contact: React.FC = () => {
   const [personalData, setPersonalData] = useState<ICard[]>([
     {
-      title: 'An e-mail!',
+      title: 'Send me an e-mail!',
       subtitle: 'maxhmoyano@gmail',
       icon: faTelegramPlane,
       action: () => {
@@ -20,7 +33,7 @@ const Contact: React.FC = () => {
       },
     },
     {
-      title: 'A call maybe?',
+      title: 'Perhaps a call?',
       subtitle: '+54 3512766171',
       icon: faWhatsapp,
       action: () => {
@@ -39,9 +52,12 @@ const Contact: React.FC = () => {
 
   return (
     <Wrapper>
-      {personalData.map((item, idx) => (
-        <Card key={idx} {...item} />
-      ))}
+      <Title>Wanna work toguether?</Title>
+      <List>
+        {personalData.map((item, idx) => (
+          <Card key={idx} {...item} />
+        ))}
+      </List>
     </Wrapper>
   );
 };
