@@ -3,6 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 import NerdWallet from '../../assets/img/nerdwallet.png';
 import Aloha from '../../assets/img/aloha.png';
+import Argos from '../../assets/img/argos.jpeg';
+import Amerian from '../../assets/img/amerian.png';
+import Greatminds from '../../assets/img/greatminds.png';
 interface ImgContainerI {
   colSpan?: number;
   rowSpan?: number;
@@ -14,12 +17,27 @@ const ImgHoverWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   transition: all ease 0.3s;
   opacity: 0;
-  font-size: 2rem;
   color: white;
-  background-color: ${pol('#000', 0.7)};
+  background-color: ${pol('#000', 0.6)};
   padding: 2rem;
+  > h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 75%;
+  }
+
+  > p {
+    display: inline-block;
+    width: 75%;
+    font-size: 1.5rem;
+  }
 `;
 
 const ImgContainer = styled.div<ImgContainerI>`
@@ -28,14 +46,13 @@ const ImgContainer = styled.div<ImgContainerI>`
   grid-row-start: span ${(props) => props.rowSpan || 1};
   /* border: 1px solid #fff; */
   background-color: transparent;
-  opacity: 0.8;
   transition: all ease 0.3s;
   cursor: pointer;
   max-height: 100%;
   display: flex;
   &:hover {
-    opacity: 1;
-    box-shadow: 1rem 1rem 2rem black;
+    transform: scale(1.05);
+    box-shadow: 2rem 1rem 2rem black;
     > ${ImgHoverWrapper} {
       opacity: 1;
     }
@@ -57,20 +74,54 @@ const Work: React.FC = () => {
     <Wrapper>
       <ImgContainer colSpan={2}>
         <img style={{ objectFit: 'contain' }} src={Aloha} />
-        <ImgHoverWrapper>Aloha Dashboard</ImgHoverWrapper>
-      </ImgContainer>
-      <ImgContainer>
-        <ImgHoverWrapper>Greatminds React-Components Library</ImgHoverWrapper>
-      </ImgContainer>
-      <ImgContainer rowSpan={2}>
-        <ImgHoverWrapper>Amerian Hotels Management System</ImgHoverWrapper>
+        <ImgHoverWrapper>
+          <h3>Aloha Dashboard</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iure
+            perspiciatis cumque velit adipisci tempore placeat aspernatur vero?
+          </p>
+        </ImgHoverWrapper>
       </ImgContainer>
       <ImgContainer colSpan={1}>
-        <ImgHoverWrapper>Argos Caterpillar Monitoring System</ImgHoverWrapper>
+        <img style={{ objectFit: 'contain' }} src={Amerian} />
+        <ImgHoverWrapper>
+          <h3>Amerian Hotels Management System</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempore similique
+            voluptas ipsa animi, vel id saepe architecto? Unde, inventore!
+          </p>
+        </ImgHoverWrapper>
+      </ImgContainer>
+
+      <ImgContainer rowSpan={2}>
+        <img style={{ objectFit: 'fill' }} src={Argos} />
+        <ImgHoverWrapper>
+          <h3>Argos Caterpillar Monitoring System</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, totam earum at nemo
+            sunt corrupti vel tenetur nostrum voluptate perferendis.
+          </p>
+        </ImgHoverWrapper>
+      </ImgContainer>
+      <ImgContainer>
+        <img style={{ objectFit: 'fill' }} src={Greatminds} />
+        <ImgHoverWrapper>
+          <h3>Greatminds React-Components Library</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla assumenda hic recusandae
+            deleniti animi. Nisi nihil reprehenderit corrupti expedita enim?
+          </p>
+        </ImgHoverWrapper>
       </ImgContainer>
       <ImgContainer colSpan={2}>
         <img style={{ objectFit: 'fill' }} src={NerdWallet} />
-        <ImgHoverWrapper>NerdWallet Insurance Preflow</ImgHoverWrapper>
+        <ImgHoverWrapper>
+          <h3>NerdWallet Insurance Preflow</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at vel, quia quasi ea
+            tempora fugit. At perspiciatis distinctio nesciunt.
+          </p>
+        </ImgHoverWrapper>
       </ImgContainer>
     </Wrapper>
   );
