@@ -1,12 +1,16 @@
 import { rgba as pol } from 'polished';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import styled from 'styled-components';
 import NerdWallet from '../../assets/img/nerdwallet.png';
 import Aloha from '../../assets/img/aloha.png';
 import Argos from '../../assets/img/argos.jpeg';
 import Amerian from '../../assets/img/amerian.png';
 import Greatminds from '../../assets/img/greatminds.png';
-interface ImgContainerI {
+interface IProject {
+  title: string;
+  description: string;
+  imgObjectFit: string;
+  imgSrc: any;
   colSpan?: number;
   rowSpan?: number;
 }
@@ -40,7 +44,7 @@ const ImgHoverWrapper = styled.div`
   }
 `;
 
-const ImgContainer = styled.div<ImgContainerI>`
+const ImgContainer = styled.div<IProject>`
   position: relative;
   grid-column-start: span ${(props) => props.colSpan || 1};
   grid-row-start: span ${(props) => props.rowSpan || 1};
@@ -58,6 +62,7 @@ const ImgContainer = styled.div<ImgContainerI>`
     }
   }
   img {
+    object-fit: ${(props) => props.imgObjectFit};
     width: 100%;
   }
 `;
@@ -70,59 +75,58 @@ const Wrapper = styled.div`
 `;
 
 const Work: React.FC = () => {
+  const projects: IProject[] = [
+    {
+      title: 'NerdWallet Insurance Preflow',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iurperspiciatis cumque velit adipisci tempore placeat aspernatur vero',
+      imgObjectFit: 'fill',
+      imgSrc: NerdWallet,
+      colSpan: 2,
+    },
+    {
+      title: 'Greatminds React-Components Library',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iurperspiciatis cumque velit adipisci tempore placeat aspernatur vero',
+      imgObjectFit: 'cover',
+      imgSrc: Greatminds,
+    },
+    {
+      title: 'Argos Caterpillar Monitoring System',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iurperspiciatis cumque velit adipisci tempore placeat aspernatur vero',
+      imgObjectFit: 'fill',
+      imgSrc: Argos,
+      rowSpan: 2,
+    },
+    {
+      title: 'Amerian Hotels Management System',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iurperspiciatis cumque velit adipisci tempore placeat aspernatur vero',
+      imgObjectFit: 'contain',
+      imgSrc: Amerian,
+    },
+    {
+      title: 'Aloha Dashboard',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iurperspiciatis cumque velit adipisci tempore placeat aspernatur vero',
+      imgObjectFit: 'contain',
+      imgSrc: Aloha,
+      colSpan: 2,
+    },
+  ];
+
   return (
     <Wrapper>
-      <ImgContainer colSpan={2}>
-        <img style={{ objectFit: 'contain' }} src={Aloha} />
-        <ImgHoverWrapper>
-          <h3>Aloha Dashboard</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit modi, iure
-            perspiciatis cumque velit adipisci tempore placeat aspernatur vero?
-          </p>
-        </ImgHoverWrapper>
-      </ImgContainer>
-      <ImgContainer colSpan={1}>
-        <img style={{ objectFit: 'contain' }} src={Amerian} />
-        <ImgHoverWrapper>
-          <h3>Amerian Hotels Management System</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempore similique
-            voluptas ipsa animi, vel id saepe architecto? Unde, inventore!
-          </p>
-        </ImgHoverWrapper>
-      </ImgContainer>
-
-      <ImgContainer rowSpan={2}>
-        <img style={{ objectFit: 'fill' }} src={Argos} />
-        <ImgHoverWrapper>
-          <h3>Argos Caterpillar Monitoring System</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, totam earum at nemo
-            sunt corrupti vel tenetur nostrum voluptate perferendis.
-          </p>
-        </ImgHoverWrapper>
-      </ImgContainer>
-      <ImgContainer>
-        <img style={{ objectFit: 'fill' }} src={Greatminds} />
-        <ImgHoverWrapper>
-          <h3>Greatminds React-Components Library</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla assumenda hic recusandae
-            deleniti animi. Nisi nihil reprehenderit corrupti expedita enim?
-          </p>
-        </ImgHoverWrapper>
-      </ImgContainer>
-      <ImgContainer colSpan={2}>
-        <img style={{ objectFit: 'fill' }} src={NerdWallet} />
-        <ImgHoverWrapper>
-          <h3>NerdWallet Insurance Preflow</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at vel, quia quasi ea
-            tempora fugit. At perspiciatis distinctio nesciunt.
-          </p>
-        </ImgHoverWrapper>
-      </ImgContainer>
+      {projects.map((project, idx) => (
+        <ImgContainer key={idx} {...project}>
+          <img src={project.imgSrc} />
+          <ImgHoverWrapper>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+          </ImgHoverWrapper>
+        </ImgContainer>
+      ))}
     </Wrapper>
   );
 };
